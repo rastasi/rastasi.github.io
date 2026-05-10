@@ -231,6 +231,10 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-bottom: 20px;
+}
+
+.skill-row:has(+ .skill-detail) {
   margin-bottom: 4px;
 }
 
@@ -259,7 +263,7 @@ body {
   font-size: 7px;
   font-family: 'Press Start 2P', monospace;
   color: #666;
-  margin: 0 0 12px 118px;
+  margin: 0 0 20px 118px;
   line-height: 2;
 }
 
