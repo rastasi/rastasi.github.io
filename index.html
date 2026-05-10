@@ -8,393 +8,292 @@
   <meta name="description" content="Zsolt Tasnádi - Software Architect, DevOps Expert, Programmer. 20+ years of experience.">
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- ===== MENU BAR ===== -->
-  <ul role="menu-bar">
-    <li role="menu-item" tabindex="0" aria-haspopup="true">
-      <span class="apple"></span>
-      <ul role="menu">
-        <li role="menu-item"><a href="#welcome">About This Mac&hellip;</a></li>
-        <li role="menu-item" class="divider"><a href="#about">About Zsolt</a></li>
-        <li role="menu-item"><a href="mailto:rastasi@gmail.com">Send Email&hellip;</a></li>
-      </ul>
-    </li>
-    <li role="menu-item" tabindex="0" aria-haspopup="true">
-      File
-      <ul role="menu">
-        <li role="menu-item"><a href="#about">Open About&hellip;</a></li>
-        <li role="menu-item"><a href="#studies">Open Studies&hellip;</a></li>
-        <li role="menu-item"><a href="#technologies">Open Technologies&hellip;</a></li>
-        <li role="menu-item"><a href="#experiences">Open Experiences&hellip;</a></li>
-        <li role="menu-item" class="divider"><a href="#hobbies">Open Hobbies&hellip;</a></li>
-        <li role="menu-item"><a href="#contact">Contact Info&hellip;</a></li>
-      </ul>
-    </li>
-    <li role="menu-item" tabindex="0" aria-haspopup="true">
-      Edit
-      <ul role="menu">
-        <li role="menu-item"><span class="disabled-item">Undo</span></li>
-        <li role="menu-item" class="divider"><span class="disabled-item">Cut</span></li>
-        <li role="menu-item"><span class="disabled-item">Copy</span></li>
-        <li role="menu-item"><span class="disabled-item">Paste</span></li>
-        <li role="menu-item" class="divider"><span class="disabled-item">Clear</span></li>
-        <li role="menu-item"><a href="#" id="select-all-btn">Select All</a></li>
-      </ul>
-    </li>
-    <li role="menu-item" tabindex="0" aria-haspopup="true">
-      View
-      <ul role="menu">
-        <li role="menu-item"><a href="#" data-toggle-section="about"><span class="menu-check">&#10003;</span> About</a></li>
-        <li role="menu-item"><a href="#" data-toggle-section="studies"><span class="menu-check">&#10003;</span> Studies</a></li>
-        <li role="menu-item"><a href="#" data-toggle-section="technologies"><span class="menu-check">&#10003;</span> Technologies</a></li>
-        <li role="menu-item"><a href="#" data-toggle-section="experiences"><span class="menu-check">&#10003;</span> Experiences</a></li>
-        <li role="menu-item"><a href="#" data-toggle-section="hobbies"><span class="menu-check">&#10003;</span> Hobbies</a></li>
-      </ul>
-    </li>
-    <li role="menu-item" tabindex="0" aria-haspopup="true">
-      Links
-      <ul role="menu">
-        <li role="menu-item"><a href="https://www.linkedin.com/in/rastasizsolt" target="_blank">LinkedIn</a></li>
-        <li role="menu-item"><a href="https://facebook.com/rastasizsolt" target="_blank">Facebook</a></li>
-        <li role="menu-item"><a href="https://www.instagram.com/rastasi" target="_blank">Instagram</a></li>
-        <li role="menu-item" class="divider"><a href="https://www.teletype.hu" target="_blank">Teletype.hu</a></li>
-      </ul>
-    </li>
-  </ul>
+  <!-- ===== NAV ===== -->
+  <nav id="main-nav">
+    <span class="nav-brand">RASTASI.EXE</span>
+    <div class="nav-links">
+      <a href="#about" class="nes-btn is-primary">About</a>
+      <a href="#studies" class="nes-btn">Studies</a>
+      <a href="#technologies" class="nes-btn">Tech</a>
+      <a href="#experiences" class="nes-btn">XP</a>
+      <a href="#hobbies" class="nes-btn">Hobbies</a>
+      <a href="#contact" class="nes-btn is-warning" id="contact-nav-btn">Contact</a>
+    </div>
+  </nav>
 
-  <div class="desktop">
+  <main class="page-wrapper">
 
-    <!-- ===== WELCOME ALERT BOX ===== -->
-    <div class="alert-box outer-border" id="welcome">
-      <div class="inner-border">
-        <div class="alert-contents">
-          <section class="field-row" style="justify-content: flex-start; align-items: flex-start;">
-            <img src="assets/img/profile-img.jpg" alt="Zsolt Tasnádi" class="welcome-avatar" loading="lazy">
-            <p class="alert-text" style="padding-left: 12px;">
-              Welcome to the desktop of <strong>Zsolt Tasnadi</strong> &mdash;
-              Software Architect, DevOps Expert &amp; Programmer from Szeged, Hungary.
-              Over 20 years of experience building the web.
-              Use the <strong>File</strong> menu to navigate, or scroll down to explore.
+    <!-- ===== WELCOME ===== -->
+    <section id="welcome">
+      <div class="welcome-inner">
+        <img src="assets/img/profile-img.jpg" alt="Zsolt Tasnádi" class="welcome-avatar">
+        <div class="nes-balloon from-left welcome-balloon">
+          <p>
+            Hi! I'm <strong>Zsolt Tasnadi</strong> &mdash; Software Architect, DevOps Expert &amp; Programmer
+            from Szeged, Hungary. Over 20 years of experience building the web.
+          </p>
+          <button type="button" class="nes-btn is-primary" id="welcome-continue-btn">PRESS START &gt;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <div class="nes-container with-title" id="about">
+      <p class="title">About Me</p>
+      <div class="about-layout">
+        <div class="about-left">
+          <img src="assets/img/profile-img.jpg" alt="Zsolt Tasnádi" class="about-photo" loading="lazy">
+          <div class="about-info">
+            <h2>Zsolt Tasnadi</h2>
+            <p><em>Software Architect &bull; DevOps Expert &bull; Programmer</em></p>
+            <p>
+              Hi! I'm Tasi, a 39-year-old IT expert who fell in love with programming and IT system architectures. I
+              was 11 (in 1999) when I learned HTML and the basics of the web, so I grew up with the Hungarian web
+              culture. In the last 20 years, I have worked with a lot of technologies through many trends and eras of
+              IT, from table-based static websites to the VueJS-based dynamic SPA-s, or from Drupal-powered sites to
+              ESP32 microcontroller programming. I'm competent in more than 10 programming languages and countless
+              frameworks.
             </p>
-          </section>
-          <section class="field-row" style="justify-content: flex-end">
-            <button class="btn btn-default" id="welcome-continue-btn">Continue</button>
-          </section>
-        </div>
-      </div>
-    </div>
-
-    <!-- ===== ABOUT ME WINDOW ===== -->
-    <div class="window" id="about">
-      <div class="title-bar">
-        <button aria-label="Close" class="close"></button>
-        <h1 class="title">About Me</h1>
-        <button aria-label="Resize" class="resize"></button>
-      </div>
-      <div class="separator"></div>
-      <div class="details-bar">
-        <span>Name: Zsolt Tasnadi</span>
-        <span>Location: Szeged, Hungary</span>
-        <span>Age: 39</span>
-        <span>Coding since: 1999</span>
-      </div>
-      <div class="window-pane">
-        <div class="about-layout">
-          <div class="about-left">
-            <div class="about-photo">
-              <img src="assets/img/profile-img.jpg" alt="Zsolt Tasnádi" loading="lazy">
-            </div>
-            <div class="about-info">
-              <h2>Zsolt Tasnadi</h2>
-              <p><em>Software Architect &bull; DevOps Expert &bull; Programmer</em></p>
-              <p>
-                Hi! I'm Tasi, a 39-year-old IT expert who fell in love with programming and IT system architectures. I
-                was 11 (in 1999) when I learned HTML and the basics of the web, so I grew up with the Hungarian web
-                culture. In the last 20 years, I have worked with a lot of technologies through many trends and eras of
-                IT, from table-based static websites to the VueJS-based dynamic SPA-s, or from Drupal-powered sites to
-                ESP32 microcontroller programming. I'm competent in more than 10 programming languages and countless
-                frameworks.
-              </p>
-            </div>
           </div>
-          <div class="about-datasheet">
-            <h3>Datasheet</h3>
-            <div class="field-row">
-              <label>Birthday:</label>
-              <span>1987. 06. 16.</span>
-            </div>
-            <div class="field-row">
-              <label>Birthplace:</label>
-              <span>Budapest</span>
-            </div>
-            <div class="field-row">
-              <label>Age:</label>
-              <span>39</span>
-            </div>
-            <div class="field-row">
-              <label>Location:</label>
-              <span>Szeged, Hungary</span>
-            </div>
-            <div class="separator"></div>
-            <div class="field-row">
-              <label>Email:</label>
-              <a href="mailto:rastasi@gmail.com">rastasi@gmail.com</a>
-            </div>
-            <div class="field-row">
-              <label>Phone:</label>
-              <span>+3620-489-35-35</span>
-            </div>
-            <div class="field-row">
-              <label>Website:</label>
-              <a href="https://www.teletype.hu" target="_blank">teletype.hu</a>
-            </div>
-            <div class="separator"></div>
-            <div class="field-row" style="justify-content: center; flex-wrap: wrap; gap: 4px;">
-              <a href="https://facebook.com/rastasizsolt" class="btn" target="_blank">Facebook</a>
-              <a href="https://www.instagram.com/rastasi" class="btn" target="_blank">Instagram</a>
-              <a href="https://www.linkedin.com/in/rastasizsolt" class="btn" target="_blank">LinkedIn</a>
-            </div>
+        </div>
+        <div class="nes-container is-rounded about-datasheet">
+          <h3>STATS</h3>
+          <table class="about-stats-table">
+            <tr><td>Birthday</td><td>1987.06.16</td></tr>
+            <tr><td>Birthplace</td><td>Budapest</td></tr>
+            <tr><td>Age</td><td>39</td></tr>
+            <tr><td>Location</td><td>Szeged, HU</td></tr>
+            <tr><td>Email</td><td><a href="mailto:rastasi@gmail.com">rastasi@gmail.com</a></td></tr>
+            <tr><td>Phone</td><td>+3620-489-35-35</td></tr>
+            <tr><td>Web</td><td><a href="https://www.teletype.hu" target="_blank">teletype.hu</a></td></tr>
+          </table>
+          <div class="about-social">
+            <a href="https://facebook.com/rastasizsolt" class="nes-btn" target="_blank">FB</a>
+            <a href="https://www.instagram.com/rastasi" class="nes-btn is-warning" target="_blank">IG</a>
+            <a href="https://www.linkedin.com/in/rastasizsolt" class="nes-btn is-primary" target="_blank">LI</a>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- ===== STUDIES WINDOW ===== -->
-    <div class="window" id="studies">
-      <div class="title-bar">
-        <button aria-label="Close" class="close"></button>
-        <h1 class="title">Studies</h1>
-        <button aria-label="Resize" class="resize"></button>
-      </div>
-      <div class="separator"></div>
-      <div class="details-bar">
-        <span>3 Institutions</span>
-        <span>2002&ndash;2023</span>
-        <span>Technical &amp; Pedagogical</span>
-      </div>
-      <div class="window-pane">
-        <p>
-          My orientation is basically technical, I have loved the electronic world since my childhood, but besides
-          that, I love to work with people, especially with children. I have a strong sense of how to teach and
-          present any topic. I'm happy when I get the chance to manage and organize people at work (or even my
-          family and friends), so for that reason my studies have not only been technology-related. I'm a system
-          administrator and a Waldorf teacher as well.
-        </p>
-        <div class="separator"></div>
-        <table class="studies-table">
+    <!-- ===== STUDIES ===== -->
+    <div class="nes-container with-title" id="studies">
+      <p class="title">Studies</p>
+      <p>
+        My orientation is basically technical, I have loved the electronic world since my childhood, but besides
+        that, I love to work with people, especially with children. I have a strong sense of how to teach and
+        present any topic. I'm a system administrator and a Waldorf teacher as well.
+      </p>
+      <table class="nes-table is-bordered studies-table">
+        <thead>
+          <tr><th>Period</th><th>Institution &amp; Degree</th></tr>
+        </thead>
+        <tbody>
           <tr>
-            <td><strong>2002&ndash;2008</strong></td>
+            <td>2002&ndash;2008</td>
             <td>
               <strong>Petrik Lajos Secondary School</strong><br>
               <em>System administration (OKJ 54 4641 03)</em>
             </td>
           </tr>
           <tr>
-            <td><strong>2008&ndash;2012</strong></td>
+            <td>2008&ndash;2012</td>
             <td>
               <strong>T&ouml;r&ouml;k S&aacute;ndor Waldorf-pedagogical Institute</strong><br>
               <em>Waldorf teacher (drama)</em>
             </td>
           </tr>
           <tr>
-            <td><strong>2023</strong></td>
+            <td>2023</td>
             <td>
               <strong>Centre of Vocational Education Szeged</strong><br>
               <em>Cultural event organizer</em>
             </td>
           </tr>
-        </table>
-      </div>
+        </tbody>
+      </table>
     </div>
 
-    <!-- ===== TECHNOLOGIES WINDOW ===== -->
-    <div class="window" id="technologies">
-      <div class="title-bar">
-        <button aria-label="Close" class="close"></button>
-        <h1 class="title">Technologies</h1>
-        <button aria-label="Resize" class="resize"></button>
-      </div>
-      <div class="separator"></div>
-      <div class="details-bar">
-        <span>20+ Years Experience</span>
-        <span>18 Technologies</span>
-        <span>5 Categories</span>
-      </div>
-      <div class="window-pane">
-        <p>
-          Over the last 20 years, I have worked with many technologies. Whenever I have an idea or a new job, I always
-          concentrate on finding solutions, not on the technology stack which provides them. I have the courage and
-          curiosity to learn new languages and frameworks, so it's difficult to write an exhaustive and up-to-date
-          list of my knowledge.
-        </p>
-        <div class="separator"></div>
+    <!-- ===== TECHNOLOGIES ===== -->
+    <div class="nes-container with-title" id="technologies">
+      <p class="title">Technologies</p>
+      <p>
+        Over the last 20 years, I have worked with many technologies. Whenever I have an idea or a new job, I always
+        concentrate on finding solutions, not on the technology stack which provides them. I have the courage and
+        curiosity to learn new languages and frameworks.
+      </p>
 
-        <!-- Category filter checkboxes -->
-        <div class="field-row tech-filter-row">
-          <label><strong>Show:</strong></label>
-          <input id="chk-backend" type="checkbox" name="tech-filter" checked data-category="backend">
-          <label for="chk-backend">Backend</label>
-          <input id="chk-frontend" type="checkbox" name="tech-filter" checked data-category="frontend">
-          <label for="chk-frontend">Frontend</label>
-          <input id="chk-devops" type="checkbox" name="tech-filter" checked data-category="devops">
-          <label for="chk-devops">DevOps</label>
-          <input id="chk-brokers" type="checkbox" name="tech-filter" checked data-category="brokers">
-          <label for="chk-brokers">Brokers</label>
-          <input id="chk-other" type="checkbox" name="tech-filter" checked data-category="other">
-          <label for="chk-other">Other</label>
+      <div class="tech-filter-row">
+        <strong>Show:</strong>
+        <label>
+          <input type="checkbox" class="nes-checkbox" id="chk-backend" name="tech-filter" checked data-category="backend">
+          <span>Backend</span>
+        </label>
+        <label>
+          <input type="checkbox" class="nes-checkbox" id="chk-frontend" name="tech-filter" checked data-category="frontend">
+          <span>Frontend</span>
+        </label>
+        <label>
+          <input type="checkbox" class="nes-checkbox" id="chk-devops" name="tech-filter" checked data-category="devops">
+          <span>DevOps</span>
+        </label>
+        <label>
+          <input type="checkbox" class="nes-checkbox" id="chk-brokers" name="tech-filter" checked data-category="brokers">
+          <span>Brokers</span>
+        </label>
+        <label>
+          <input type="checkbox" class="nes-checkbox" id="chk-other" name="tech-filter" checked data-category="other">
+          <span>Other</span>
+        </label>
+      </div>
+
+      <div class="tech-columns">
+        <div class="tech-col">
+
+          <div class="tech-category" data-category="backend">
+            <h3>Backend Programming</h3>
+            <div class="skill-row">
+              <span class="skill-label">Databases</span>
+              <progress class="nes-progress is-success" value="90" max="100"></progress>
+              <span class="skill-pct">90%</span>
+            </div>
+            <p class="skill-detail">MySQL/MariaDB, Postgres, MongoDB, ElasticSearch</p>
+            <div class="skill-row">
+              <span class="skill-label">Node.js</span>
+              <progress class="nes-progress is-primary" value="95" max="100"></progress>
+              <span class="skill-pct">95%</span>
+            </div>
+            <p class="skill-detail">TypeScript, Express, Sequelize, Mongoose, Knex</p>
+            <div class="skill-row">
+              <span class="skill-label">Ruby</span>
+              <progress class="nes-progress is-warning" value="100" max="100"></progress>
+              <span class="skill-pct">100%</span>
+            </div>
+            <p class="skill-detail">Rails, Sinatra, Padrino, Grape, Rack::App</p>
+            <div class="skill-row">
+              <span class="skill-label">Golang</span>
+              <progress class="nes-progress is-primary" value="85" max="100"></progress>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-row">
+              <span class="skill-label">Python</span>
+              <progress class="nes-progress is-success" value="65" max="100"></progress>
+              <span class="skill-pct">65%</span>
+            </div>
+            <p class="skill-detail">Django, Flask</p>
+            <div class="skill-row">
+              <span class="skill-label">PHP</span>
+              <progress class="nes-progress is-error" value="70" max="100"></progress>
+              <span class="skill-pct">70%</span>
+            </div>
+            <p class="skill-detail">Drupal (5.x, 6.x, 7.x)</p>
+          </div>
+
+          <div class="tech-category" data-category="frontend">
+            <h3>Frontend Programming</h3>
+            <div class="skill-row">
+              <span class="skill-label">HTML, CSS</span>
+              <progress class="nes-progress is-warning" value="100" max="100"></progress>
+              <span class="skill-pct">100%</span>
+            </div>
+            <div class="skill-row">
+              <span class="skill-label">CSS Frameworks</span>
+              <progress class="nes-progress is-success" value="75" max="100"></progress>
+              <span class="skill-pct">75%</span>
+            </div>
+            <p class="skill-detail">Foundation, Bootstrap, Material UI</p>
+            <div class="skill-row">
+              <span class="skill-label">Vue.js</span>
+              <progress class="nes-progress is-primary" value="85" max="100"></progress>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-row">
+              <span class="skill-label">React.js</span>
+              <progress class="nes-progress is-primary" value="70" max="100"></progress>
+              <span class="skill-pct">70%</span>
+            </div>
+          </div>
+
         </div>
+        <div class="tech-col">
 
-        <div class="separator"></div>
-
-        <div class="tech-columns">
-          <div class="tech-col">
-
-            <div class="tech-category" data-category="backend">
-              <h3>Backend Programming</h3>
-              <div class="field-row skill-row">
-                <label class="skill-label">Databases</label>
-                <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
-                <span class="skill-pct">90%</span>
-              </div>
-              <div class="skill-detail">MySQL/MariaDB, Postgres, MongoDB, ElasticSearch</div>
-              <div class="field-row skill-row">
-                <label class="skill-label">Node.js</label>
-                <div class="skill-bar"><div class="skill-fill" style="width: 95%;"></div></div>
-                <span class="skill-pct">95%</span>
-              </div>
-              <div class="skill-detail">TypeScript, Express, Sequelize, Mongoose, Knex</div>
-              <div class="field-row skill-row">
-                <label class="skill-label">Ruby</label>
-                <div class="skill-bar"><div class="skill-fill" style="width: 100%;"></div></div>
-                <span class="skill-pct">100%</span>
-              </div>
-              <div class="skill-detail">Rails, Sinatra, Padrino, Grape, Rack::App</div>
-              <div class="field-row skill-row">
-                <label class="skill-label">Golang</label>
-                <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
-                <span class="skill-pct">85%</span>
-              </div>
-              <div class="field-row skill-row">
-                <label class="skill-label">Python</label>
-                <div class="skill-bar"><div class="skill-fill" style="width: 65%;"></div></div>
-                <span class="skill-pct">65%</span>
-              </div>
-              <div class="skill-detail">Django, Flask</div>
-              <div class="field-row skill-row">
-                <label class="skill-label">PHP</label>
-                <div class="skill-bar"><div class="skill-fill" style="width: 70%;"></div></div>
-                <span class="skill-pct">70%</span>
-              </div>
-              <div class="skill-detail">Drupal (5.x, 6.x, 7.x)</div>
+          <div class="tech-category" data-category="devops">
+            <h3>DevOps</h3>
+            <div class="skill-row">
+              <span class="skill-label">Docker</span>
+              <progress class="nes-progress is-primary" value="95" max="100"></progress>
+              <span class="skill-pct">95%</span>
             </div>
-
-            <div class="tech-category" data-category="frontend">
-              <h3>Frontend Programming</h3>
-              <div class="field-row skill-row">
-                <label class="skill-label">HTML, CSS</label>
-                <div class="skill-bar"><div class="skill-fill" style="width: 100%;"></div></div>
-                <span class="skill-pct">100%</span>
-              </div>
-              <div class="field-row skill-row">
-                <label class="skill-label">CSS Frameworks</label>
-                <div class="skill-bar"><div class="skill-fill" style="width: 75%;"></div></div>
-                <span class="skill-pct">75%</span>
-              </div>
-              <div class="skill-detail">Foundation, Bootstrap, Material UI</div>
-              <div class="field-row skill-row">
-                <label class="skill-label">Vue.js</label>
-                <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
-                <span class="skill-pct">85%</span>
-              </div>
-              <div class="field-row skill-row">
-                <label class="skill-label">React.js</label>
-                <div class="skill-bar"><div class="skill-fill" style="width: 70%;"></div></div>
-                <span class="skill-pct">70%</span>
-              </div>
+            <p class="skill-detail">Docker, Compose, Swarm</p>
+            <div class="skill-row">
+              <span class="skill-label">Orchestration</span>
+              <progress class="nes-progress is-success" value="65" max="100"></progress>
+              <span class="skill-pct">65%</span>
             </div>
-
+            <p class="skill-detail">Kubernetes, Helm, Ansible, Terraform</p>
+            <div class="skill-row">
+              <span class="skill-label">Sysadmin</span>
+              <progress class="nes-progress is-warning" value="100" max="100"></progress>
+              <span class="skill-pct">100%</span>
+            </div>
+            <p class="skill-detail">Debian/Ubuntu, ISPConfig3, VMware, Jenkins, PM2</p>
           </div>
 
-          <div class="tech-col">
-
-            <div class="tech-category" data-category="devops">
-              <h3>DevOps</h3>
-              <div class="field-row skill-row">
-                <label class="skill-label">Docker ecosystem</label>
-                <div class="skill-bar"><div class="skill-fill" style="width: 95%;"></div></div>
-                <span class="skill-pct">95%</span>
-              </div>
-              <div class="skill-detail">Docker, Compose, Swarm</div>
-              <div class="field-row skill-row">
-                <label class="skill-label">Orchestration</label>
-                <div class="skill-bar"><div class="skill-fill" style="width: 65%;"></div></div>
-                <span class="skill-pct">65%</span>
-              </div>
-              <div class="skill-detail">Kubernetes, Helm, Ansible, Terraform</div>
-              <div class="field-row skill-row">
-                <label class="skill-label">Sysadmin</label>
-                <div class="skill-bar"><div class="skill-fill" style="width: 100%;"></div></div>
-                <span class="skill-pct">100%</span>
-              </div>
-              <div class="skill-detail">Debian/Ubuntu, ISPConfig3, VMware, Jenkins, PM2</div>
+          <div class="tech-category" data-category="brokers">
+            <h3>Message Brokers</h3>
+            <div class="skill-row">
+              <span class="skill-label">RabbitMQ</span>
+              <progress class="nes-progress is-primary" value="70" max="100"></progress>
+              <span class="skill-pct">70%</span>
             </div>
-
-            <div class="tech-category" data-category="brokers">
-              <h3>Message Brokers</h3>
-              <div class="field-row skill-row">
-                <label class="skill-label">RabbitMQ</label>
-                <div class="skill-bar"><div class="skill-fill" style="width: 70%;"></div></div>
-                <span class="skill-pct">70%</span>
-              </div>
-              <div class="field-row skill-row">
-                <label class="skill-label">MQTT</label>
-                <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
-                <span class="skill-pct">80%</span>
-              </div>
-              <div class="field-row skill-row">
-                <label class="skill-label">NATS</label>
-                <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
-                <span class="skill-pct">80%</span>
-              </div>
+            <div class="skill-row">
+              <span class="skill-label">MQTT</span>
+              <progress class="nes-progress is-success" value="80" max="100"></progress>
+              <span class="skill-pct">80%</span>
             </div>
-
-            <div class="tech-category" data-category="other">
-              <h3>Other Technologies</h3>
-              <div class="field-row skill-row">
-                <label class="skill-label">Pascal, Delphi</label>
-                <div class="skill-bar"><div class="skill-fill" style="width: 30%;"></div></div>
-                <span class="skill-pct">30%</span>
-              </div>
-              <div class="field-row skill-row">
-                <label class="skill-label">ESP32, C++</label>
-                <div class="skill-bar"><div class="skill-fill" style="width: 50%;"></div></div>
-                <span class="skill-pct">50%</span>
-              </div>
+            <div class="skill-row">
+              <span class="skill-label">NATS</span>
+              <progress class="nes-progress is-success" value="80" max="100"></progress>
+              <span class="skill-pct">80%</span>
             </div>
-
           </div>
+
+          <div class="tech-category" data-category="other">
+            <h3>Other Technologies</h3>
+            <div class="skill-row">
+              <span class="skill-label">Pascal/Delphi</span>
+              <progress class="nes-progress is-error" value="30" max="100"></progress>
+              <span class="skill-pct">30%</span>
+            </div>
+            <div class="skill-row">
+              <span class="skill-label">ESP32, C++</span>
+              <progress class="nes-progress is-warning" value="50" max="100"></progress>
+              <span class="skill-pct">50%</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
 
-    <!-- ===== EXPERIENCES WINDOW ===== -->
-    <div class="window" id="experiences">
-      <div class="title-bar">
-        <button aria-label="Close" class="close"></button>
-        <h1 class="title">Experiences</h1>
-        <button aria-label="Resize" class="resize"></button>
-      </div>
-      <div class="separator"></div>
-      <div class="details-bar">
-        <span>~20 Positions</span>
-        <span>2004&ndash;Present</span>
-        <span>
-          <label for="exp-filter">Phase:</label>
+    <!-- ===== EXPERIENCES ===== -->
+    <div class="nes-container with-title" id="experiences">
+      <p class="title">Experiences</p>
+      <p>
+        I have had a number of jobs in different positions and different kinds of company over the years. In the
+        last few years, I have founded and worked with a couple of startups. I relish this world and working with
+        enthusiastic young teams.
+      </p>
+      <div class="exp-filter-row">
+        <strong>Phase:</strong>
+        <div class="nes-select">
           <select id="exp-filter">
             <option value="all">All Phases</option>
             <option value="early">Early Years</option>
@@ -402,213 +301,169 @@
             <option value="startup">Startup Career</option>
             <option value="current">Post-startup &amp; Current</option>
           </select>
-        </span>
+        </div>
       </div>
-      <div class="window-pane">
-        <p>
-          I have had a number of jobs in different positions and different kinds of company over the years. In the
-          last few years, I have founded and worked with a couple of startups. I relish this world and working with
-          enthusiastic young teams.
-        </p>
-        <div class="separator"></div>
 
-        <div class="exp-columns">
-          <div class="exp-col">
+      <div class="exp-columns">
+        <div class="exp-col">
 
-            <div class="exp-phase" data-phase="early">
-              <h3>Early Years</h3>
-              <table class="exp-table">
-                <tr>
-                  <td class="exp-year">2004&ndash;2008</td>
-                  <td><strong>G&ouml;d&ouml;ll&#337; Waldorf School</strong><br><em>sysadmin and webmaster</em></td>
-                </tr>
-                <tr>
-                  <td class="exp-year">2009&ndash;2015</td>
-                  <td><strong>Avignonet Ltd</strong><br><em>ISP sysadmin (ISPConfig3, PHP, NGINX, Postfix, Dovecot)</em></td>
-                </tr>
-                <tr>
-                  <td class="exp-year">2009&ndash;2017</td>
-                  <td><strong>Syrakuza (own team)</strong><br><em>sales and project manager (Drupal 5.x&ndash;7.x)</em></td>
-                </tr>
-              </table>
-            </div>
-
-            <div class="exp-phase" data-phase="fulltime">
-              <h3>Full-time Career</h3>
-              <table class="exp-table">
-                <tr>
-                  <td class="exp-year">2012&ndash;2014</td>
-                  <td><strong>PPT Group Ltd</strong><br><em>Ruby programmer (VOIP, XMPP expert)</em></td>
-                </tr>
-                <tr>
-                  <td class="exp-year">2013&ndash;2016</td>
-                  <td><strong>Hungarian Waldorf Alliance</strong><br><em>sysadmin and webmaster</em></td>
-                </tr>
-                <tr>
-                  <td class="exp-year">2014&ndash;2015</td>
-                  <td><strong>Brainsum Ltd</strong><br><em>Drupal developer (7.x)</em></td>
-                </tr>
-                <tr>
-                  <td class="exp-year">2015&ndash;2016</td>
-                  <td><strong>VeryCreatives Ltd</strong><br><em>Ruby programmer (Ruby on Rails, React.js)</em></td>
-                </tr>
-                <tr>
-                  <td class="exp-year">2016&ndash;2018</td>
-                  <td><strong>Electool Hungary Ltd</strong><br><em>Ruby programmer (Ruby on Rails, React.js)</em></td>
-                </tr>
-              </table>
-            </div>
-
+          <div class="exp-phase" data-phase="early">
+            <h3>Early Years</h3>
+            <table class="nes-table is-bordered exp-table">
+              <tr>
+                <td class="exp-year">2004&ndash;2008</td>
+                <td><strong>G&ouml;d&ouml;ll&#337; Waldorf School</strong><br><em>sysadmin and webmaster</em></td>
+              </tr>
+              <tr>
+                <td class="exp-year">2009&ndash;2015</td>
+                <td><strong>Avignonet Ltd</strong><br><em>ISP sysadmin (ISPConfig3, PHP, NGINX, Postfix, Dovecot)</em></td>
+              </tr>
+              <tr>
+                <td class="exp-year">2009&ndash;2017</td>
+                <td><strong>Syrakuza (own team)</strong><br><em>sales and project manager (Drupal 5.x&ndash;7.x)</em></td>
+              </tr>
+            </table>
           </div>
 
-          <div class="exp-col">
-
-            <div class="exp-phase" data-phase="startup">
-              <h3>Startup Career</h3>
-              <table class="exp-table">
-                <tr>
-                  <td class="exp-year">2016&ndash;2017</td>
-                  <td><strong>Addventure Ltd</strong><br><em>co-founder, lead developer (Rails, Express, React.js)</em></td>
-                </tr>
-                <tr>
-                  <td class="exp-year">2018&ndash;2019</td>
-                  <td><strong>Drukka Startup Studio</strong><br><em>CTO (Organizational &amp; Technology development)</em></td>
-                </tr>
-                <tr>
-                  <td class="exp-year">2017&ndash;2020</td>
-                  <td><strong>Flow Academy Ltd</strong><br><em>mentor (JavaScript, SQL, Clean Code, Express, React.js)</em></td>
-                </tr>
-                <tr>
-                  <td class="exp-year">2017&ndash;2021</td>
-                  <td><strong>Ai Venture Ltd</strong><br><em>co-founder (Rails, Express, React.js, Facebook API, NLP)</em></td>
-                </tr>
-                <tr>
-                  <td class="exp-year">2017&ndash;2023</td>
-                  <td><strong>Swipe Technologies (Salarify)</strong><br><em>co-founder, CTO (Express, React.js, K8s, Terraform)</em></td>
-                </tr>
-                <tr>
-                  <td class="exp-year">2021&ndash;2023</td>
-                  <td><strong>Smart Babee Hungary</strong><br><em>advisor, backend dev (Express, React Native, Vue, AWS)</em></td>
-                </tr>
-                <tr>
-                  <td class="exp-year">2022&ndash;2023</td>
-                  <td><strong>ReFilamer Ltd</strong><br><em>advisor, fullstack dev (Golang, Vue, C++, ESP32)</em></td>
-                </tr>
-              </table>
-            </div>
-
-            <div class="exp-phase" data-phase="current">
-              <h3>Post-startup &amp; Current</h3>
-              <table class="exp-table">
-                <tr>
-                  <td class="exp-year">2023&ndash;2025</td>
-                  <td><strong>PublishDrive Ltd</strong><br><em>Engineering Team Lead (PHP, Laravel, Python, FastAPI, K8s, RabbitMQ)</em></td>
-                </tr>
-                <tr>
-                  <td class="exp-year">2024&ndash;now</td>
-                  <td><strong>Benchmark Games</strong><br><em>backend developer (Python, Redis, Postgres, K8s)</em></td>
-                </tr>
-                <tr>
-                  <td class="exp-year">2025&ndash;now</td>
-                  <td><strong>Zen Heads</strong><br><em>full-stack developer (Python, Postgres, Terraform, K8s, React)</em></td>
-                </tr>
-              </table>
-            </div>
-
+          <div class="exp-phase" data-phase="fulltime">
+            <h3>Full-time Career</h3>
+            <table class="nes-table is-bordered exp-table">
+              <tr>
+                <td class="exp-year">2012&ndash;2014</td>
+                <td><strong>PPT Group Ltd</strong><br><em>Ruby programmer (VOIP, XMPP expert)</em></td>
+              </tr>
+              <tr>
+                <td class="exp-year">2013&ndash;2016</td>
+                <td><strong>Hungarian Waldorf Alliance</strong><br><em>sysadmin and webmaster</em></td>
+              </tr>
+              <tr>
+                <td class="exp-year">2014&ndash;2015</td>
+                <td><strong>Brainsum Ltd</strong><br><em>Drupal developer (7.x)</em></td>
+              </tr>
+              <tr>
+                <td class="exp-year">2015&ndash;2016</td>
+                <td><strong>VeryCreatives Ltd</strong><br><em>Ruby programmer (Ruby on Rails, React.js)</em></td>
+              </tr>
+              <tr>
+                <td class="exp-year">2016&ndash;2018</td>
+                <td><strong>Electool Hungary Ltd</strong><br><em>Ruby programmer (Ruby on Rails, React.js)</em></td>
+              </tr>
+            </table>
           </div>
+
+        </div>
+        <div class="exp-col">
+
+          <div class="exp-phase" data-phase="startup">
+            <h3>Startup Career</h3>
+            <table class="nes-table is-bordered exp-table">
+              <tr>
+                <td class="exp-year">2016&ndash;2017</td>
+                <td><strong>Addventure Ltd</strong><br><em>co-founder, lead developer (Rails, Express, React.js)</em></td>
+              </tr>
+              <tr>
+                <td class="exp-year">2018&ndash;2019</td>
+                <td><strong>Drukka Startup Studio</strong><br><em>CTO (Organizational &amp; Technology development)</em></td>
+              </tr>
+              <tr>
+                <td class="exp-year">2017&ndash;2020</td>
+                <td><strong>Flow Academy Ltd</strong><br><em>mentor (JavaScript, SQL, Clean Code, Express, React.js)</em></td>
+              </tr>
+              <tr>
+                <td class="exp-year">2017&ndash;2021</td>
+                <td><strong>Ai Venture Ltd</strong><br><em>co-founder (Rails, Express, React.js, Facebook API, NLP)</em></td>
+              </tr>
+              <tr>
+                <td class="exp-year">2017&ndash;2023</td>
+                <td><strong>Swipe Technologies (Salarify)</strong><br><em>co-founder, CTO (Express, React.js, K8s, Terraform)</em></td>
+              </tr>
+              <tr>
+                <td class="exp-year">2021&ndash;2023</td>
+                <td><strong>Smart Babee Hungary</strong><br><em>advisor, backend dev (Express, React Native, Vue, AWS)</em></td>
+              </tr>
+              <tr>
+                <td class="exp-year">2022&ndash;2023</td>
+                <td><strong>ReFilamer Ltd</strong><br><em>advisor, fullstack dev (Golang, Vue, C++, ESP32)</em></td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="exp-phase" data-phase="current">
+            <h3>Post-startup &amp; Current</h3>
+            <table class="nes-table is-bordered exp-table">
+              <tr>
+                <td class="exp-year">2023&ndash;2025</td>
+                <td><strong>PublishDrive Ltd</strong><br><em>Engineering Team Lead (PHP, Laravel, Python, FastAPI, K8s, RabbitMQ)</em></td>
+              </tr>
+              <tr>
+                <td class="exp-year">2024&ndash;now</td>
+                <td><strong>Benchmark Games</strong><br><em>backend developer (Python, Redis, Postgres, K8s)</em></td>
+              </tr>
+              <tr>
+                <td class="exp-year">2025&ndash;now</td>
+                <td><strong>Zen Heads</strong><br><em>full-stack developer (Python, Postgres, Terraform, K8s, React)</em></td>
+              </tr>
+            </table>
+          </div>
+
         </div>
       </div>
     </div>
 
-    <!-- ===== HOBBIES WINDOW ===== -->
-    <div class="window" id="hobbies">
-      <div class="title-bar">
-        <button aria-label="Close" class="close"></button>
-        <h1 class="title">Hobbies</h1>
-        <button aria-label="Resize" class="resize"></button>
-      </div>
-      <div class="separator"></div>
-      <div class="details-bar">
-        <span>Interests &amp; Collections</span>
-        <span>Hardware &amp; History</span>
-      </div>
-      <div class="window-pane">
-        <p>
-          I have an interest in many different topics, for example, alternative operating systems and IT history. I
-          have a collection of old game consoles. I love human topics as well, especially history and theology. I'm a
-          Waldorf teacher, so I enjoy reading about psychology, pedagogy, and drama theory.
-        </p>
-        <div class="separator"></div>
-        <div class="hobbies-gallery">
-          <div class="hobby-item">
-            <div class="hobby-img-frame">
-              <img src="assets/img/hobbies/esp32.jpg" alt="ESP32 Microcontroller" loading="lazy">
-            </div>
-            <div class="details-bar hobby-caption">
-              <span>ESP32</span>
-              <span>Microcontrollers</span>
-            </div>
+    <!-- ===== HOBBIES ===== -->
+    <div class="nes-container with-title" id="hobbies">
+      <p class="title">Hobbies</p>
+      <p>
+        I have an interest in many different topics, for example, alternative operating systems and IT history. I
+        have a collection of old game consoles. I love human topics as well, especially history and theology. I'm a
+        Waldorf teacher, so I enjoy reading about psychology, pedagogy, and drama theory.
+      </p>
+      <div class="hobbies-gallery">
+        <div class="hobby-item">
+          <div class="nes-container is-rounded hobby-frame">
+            <img src="assets/img/hobbies/esp32.jpg" alt="ESP32 Microcontroller" loading="lazy">
           </div>
-          <div class="hobby-item">
-            <div class="hobby-img-frame">
-              <img src="assets/img/hobbies/xboxcontroller.jpg" alt="Xbox 360 Controller" loading="lazy">
-            </div>
-            <div class="details-bar hobby-caption">
-              <span>Xbox 360</span>
-              <span>Gaming</span>
-            </div>
+          <p class="hobby-caption"><strong>ESP32</strong> &mdash; Microcontrollers</p>
+        </div>
+        <div class="hobby-item">
+          <div class="nes-container is-rounded hobby-frame">
+            <img src="assets/img/hobbies/xboxcontroller.jpg" alt="Xbox 360 Controller" loading="lazy">
           </div>
-          <div class="hobby-item">
-            <div class="hobby-img-frame">
-              <img src="assets/img/hobbies/controllers.jpg" alt="Retro Controllers" loading="lazy">
-            </div>
-            <div class="details-bar hobby-caption">
-              <span>DC / GC / PS2</span>
-              <span>Retro Gaming</span>
-            </div>
+          <p class="hobby-caption"><strong>Xbox 360</strong> &mdash; Gaming</p>
+        </div>
+        <div class="hobby-item">
+          <div class="nes-container is-rounded hobby-frame">
+            <img src="assets/img/hobbies/controllers.jpg" alt="Retro Controllers" loading="lazy">
           </div>
+          <p class="hobby-caption"><strong>DC / GC / PS2</strong> &mdash; Retro Gaming</p>
         </div>
       </div>
     </div>
 
-    <!-- ===== FOOTER: STANDARD DIALOG ===== -->
-    <div class="standard-dialog center" id="footer-info">
-      <h1 class="dialog-text">Zsolt Tasnadi</h1>
-      <p class="dialog-text">Programmer &bull; DevOps &bull; Architect</p>
-      <p class="dialog-text">&copy; 2004&ndash;2026</p>
-    </div>
+    <!-- ===== FOOTER ===== -->
+    <footer id="footer-info">
+      <div class="nes-container is-centered">
+        <h1>Zsolt Tasnadi</h1>
+        <p>Programmer &bull; DevOps &bull; Architect</p>
+        <p>&copy; 2004&ndash;2026</p>
+      </div>
+    </footer>
 
-  </div>
+  </main>
 
-  <!-- ===== CONTACT MODAL DIALOG ===== -->
+  <!-- ===== CONTACT MODAL ===== -->
   <div class="modal-overlay" id="modal-overlay" style="display: none;"></div>
-  <div class="modal-dialog outer-border" id="contact" style="display: none;">
-    <div class="inner-border">
-      <div class="modal-contents">
-        <h1 class="modal-text">Contact Information</h1>
-        <div class="separator"></div>
-        <div class="field-row">
-          <label><strong>Email:</strong></label>
-          <a href="mailto:rastasi@gmail.com">rastasi@gmail.com</a>
-        </div>
-        <div class="field-row">
-          <label><strong>Phone:</strong></label>
-          <span>+3620-489-35-35</span>
-        </div>
-        <div class="field-row">
-          <label><strong>Website:</strong></label>
-          <a href="https://www.teletype.hu" target="_blank">www.teletype.hu</a>
-        </div>
-        <div class="field-row">
-          <label><strong>Location:</strong></label>
-          <span>Szeged, Hungary</span>
-        </div>
-        <div class="separator"></div>
-        <section class="field-row" style="justify-content: flex-end">
-          <a href="mailto:rastasi@gmail.com" class="btn btn-default">Send Email</a>
-          <button class="btn" id="contact-close-btn">Close</button>
-        </section>
-      </div>
+  <div class="nes-container with-title modal-dialog" id="contact" style="display: none;">
+    <p class="title">Contact</p>
+    <table class="contact-table">
+      <tr><td><strong>Email:</strong></td><td><a href="mailto:rastasi@gmail.com">rastasi@gmail.com</a></td></tr>
+      <tr><td><strong>Phone:</strong></td><td>+3620-489-35-35</td></tr>
+      <tr><td><strong>Website:</strong></td><td><a href="https://www.teletype.hu" target="_blank">www.teletype.hu</a></td></tr>
+      <tr><td><strong>Location:</strong></td><td>Szeged, Hungary</td></tr>
+    </table>
+    <div class="contact-actions">
+      <a href="mailto:rastasi@gmail.com" class="nes-btn is-primary">Send Email</a>
+      <button type="button" class="nes-btn" id="contact-close-btn">Close</button>
     </div>
   </div>
 
@@ -616,7 +471,6 @@
   <!-- Matomo -->
   <script>
     var _paq = window._paq = window._paq || [];
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
     _paq.push(['trackPageView']);
     _paq.push(['enableLinkTracking']);
     (function() {

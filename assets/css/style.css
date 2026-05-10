@@ -1,4 +1,4 @@
-/* Zsolt Tasnádi — system.css portfolio custom styles */
+/* Zsolt Tasnádi — NES.css portfolio */
 
 * {
   box-sizing: border-box;
@@ -7,103 +7,84 @@
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  background: #fff;
 }
 
-/* ===== MENU BAR ===== */
-ul[role="menu-bar"] {
+/* ===== NAV ===== */
+#main-nav {
   position: sticky;
   top: 0;
   z-index: 1000;
+  background: #fff;
+  border-bottom: 4px solid #000;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-ul[role="menu-bar"] a {
-  color: inherit;
-  text-decoration: none;
+.nav-brand {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
 }
 
-.disabled-item {
-  color: #999;
-  pointer-events: none;
+.nav-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-/* View menu checkmarks */
-.menu-check {
-  display: inline-block;
-  width: 1.2em;
-  text-align: center;
+.nav-links .nes-btn {
+  font-size: 8px !important;
+  padding: 6px 10px !important;
+  line-height: 1 !important;
 }
 
-.menu-check.hidden-check {
-  visibility: hidden;
-}
-
-/* ===== DESKTOP AREA ===== */
-.desktop {
-  padding: 32px 5%;
+/* ===== PAGE WRAPPER ===== */
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 64px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 32px;
-  padding-bottom: 64px;
+  gap: 36px;
 }
 
-/* ===== WINDOWS — WIDE & UNIFORM ===== */
-.window {
-  width: 90%;
-  max-width: 1200px;
+/* ===== WELCOME ===== */
+#welcome {
+  padding: 16px 0;
 }
 
-/* Title bar: close left, title center, resize right */
-.window .title-bar {
+.welcome-inner {
   display: flex;
   align-items: center;
-}
-
-.window .title-bar .title {
-  flex: 1;
-  text-align: center;
-  font-size: 13px;
-  margin: 0;
-}
-
-.window-pane {
-  padding: 20px 24px;
-  max-height: none;
-  overflow: visible;
-}
-
-/* ===== DETAILS BAR ===== */
-.details-bar {
-  font-size: 12px;
-}
-
-.details-bar select {
-  font-size: 11px;
-  height: auto;
-  padding: 1px 4px;
-  width: auto;
-}
-
-.details-bar label {
-  font-size: 11px;
-}
-
-/* ===== WELCOME ALERT BOX ===== */
-#welcome {
-  width: 44rem;
-  max-width: 95%;
+  gap: 32px;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .welcome-avatar {
-  width: 64px;
-  height: 64px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
-  border: 2px solid #000;
   flex-shrink: 0;
+  image-rendering: pixelated;
 }
 
-/* ===== ABOUT SECTION ===== */
+.welcome-balloon {
+  flex: 1;
+}
+
+.welcome-balloon p {
+  font-size: 10px;
+  line-height: 2.2;
+  margin-bottom: 16px;
+}
+
+/* ===== ABOUT ===== */
 .about-layout {
   display: flex;
   gap: 24px;
@@ -119,95 +100,80 @@ ul[role="menu-bar"] a {
 }
 
 .about-photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
   flex-shrink: 0;
+  image-rendering: pixelated;
 }
 
-.about-photo img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border: 3px solid #000;
-  box-shadow: 2px 2px 0 #000;
+.about-info {
+  flex: 1;
 }
 
 .about-info h2 {
-  margin: 0 0 6px 0;
-  font-size: 18px;
+  font-size: 13px;
+  margin: 0 0 10px 0;
 }
 
 .about-info p {
+  font-size: 9px;
+  line-height: 2.2;
   margin: 6px 0;
-  font-size: 13px;
-  line-height: 1.6;
 }
 
 .about-datasheet {
   flex-shrink: 0;
-  width: 280px;
-  border: 2px solid #000;
-  box-shadow: inset 1px 1px 0 #808080;
-  padding: 12px 16px;
-  background: #fff;
-  font-size: 12px;
+  width: 260px;
 }
 
 .about-datasheet h3 {
-  margin: 0 0 8px 0;
-  font-size: 13px;
-  border-bottom: 2px solid #000;
-  padding-bottom: 4px;
+  font-size: 10px;
+  margin: 0 0 12px 0;
+  border-bottom: 4px solid #000;
+  padding-bottom: 6px;
 }
 
-.about-datasheet .field-row {
-  padding: 2px 0;
-  font-size: 12px;
-}
-
-.about-datasheet .field-row label {
-  min-width: 80px;
-  font-weight: bold;
-  font-size: 11px;
-}
-
-.about-datasheet .field-row span,
-.about-datasheet .field-row a {
-  font-size: 11px;
-}
-
-.about-datasheet a {
-  color: #000;
-}
-
-/* ===== FIELD ROWS inside windows ===== */
-.window-pane .field-row {
-  font-size: 12px;
-  padding: 3px 0;
-}
-
-.window-pane .field-row label {
-  min-width: 100px;
-  font-size: 12px;
-}
-
-.window-pane .field-row a {
-  color: #000;
-}
-
-/* ===== STUDIES TABLE ===== */
-.studies-table {
+.about-stats-table {
   width: 100%;
-  font-size: 13px;
+  font-size: 8px;
   border-collapse: collapse;
 }
 
-.studies-table td {
-  padding: 10px 16px 10px 0;
+.about-stats-table td {
+  padding: 5px 0;
   vertical-align: top;
-  border-bottom: 1px dotted #999;
 }
 
-.studies-table tr:last-child td {
-  border-bottom: none;
+.about-stats-table td:first-child {
+  font-weight: bold;
+  white-space: nowrap;
+  padding-right: 12px;
+}
+
+.about-social {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.about-social .nes-btn {
+  font-size: 8px !important;
+}
+
+/* ===== STUDIES ===== */
+.studies-table {
+  width: 100%;
+  margin-top: 16px;
+  font-size: 9px;
+}
+
+.studies-table td,
+.studies-table th {
+  vertical-align: top;
+  padding: 10px 12px;
+  line-height: 2;
 }
 
 .studies-table td:first-child {
@@ -215,10 +181,25 @@ ul[role="menu-bar"] a {
   width: 110px;
 }
 
-/* ===== TECHNOLOGY SECTION ===== */
+/* ===== TECHNOLOGIES ===== */
 .tech-filter-row {
+  display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: 12px;
+  margin: 16px 0;
+  font-size: 9px;
+}
+
+.tech-filter-row label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.tech-filter-row label span {
+  font-size: 9px;
 }
 
 .tech-columns {
@@ -231,12 +212,11 @@ ul[role="menu-bar"] a {
   min-width: 0;
 }
 
-.tech-col h3,
 .tech-category h3 {
-  font-size: 14px;
-  margin: 20px 0 10px 0;
-  border-bottom: 2px solid #000;
-  padding-bottom: 4px;
+  font-size: 10px;
+  margin: 24px 0 12px 0;
+  border-bottom: 4px solid #000;
+  padding-bottom: 6px;
 }
 
 .tech-category:first-child h3 {
@@ -247,52 +227,51 @@ ul[role="menu-bar"] a {
   display: none;
 }
 
-/* Skill bars */
 .skill-row {
+  display: flex;
   align-items: center;
-  padding: 2px 0 !important;
+  gap: 8px;
+  margin-bottom: 4px;
 }
 
 .skill-label {
-  min-width: 140px !important;
-  font-size: 12px !important;
+  min-width: 110px;
+  font-size: 8px;
+  font-family: 'Press Start 2P', monospace;
   flex-shrink: 0;
 }
 
-.skill-bar {
+.skill-row .nes-progress {
   flex: 1;
-  height: 16px;
-  background: #fff;
-  border: 2px solid #000;
-  box-shadow: inset 1px 1px 0 #808080;
-  min-width: 60px;
-}
-
-.skill-fill {
-  height: 100%;
-  background: #000;
-  background-image: repeating-linear-gradient(
-    90deg,
-    #000 0px, #000 2px, transparent 2px, transparent 4px
-  );
+  margin-bottom: 0 !important;
 }
 
 .skill-pct {
-  min-width: 40px;
+  min-width: 36px;
   text-align: right;
-  font-size: 12px;
+  font-size: 8px;
+  font-family: 'Press Start 2P', monospace;
   font-weight: bold;
   flex-shrink: 0;
 }
 
 .skill-detail {
-  font-size: 10px;
-  color: #555;
-  padding: 0 0 4px 0;
-  margin-left: 142px;
+  font-size: 7px;
+  font-family: 'Press Start 2P', monospace;
+  color: #666;
+  margin: 0 0 12px 118px;
+  line-height: 2;
 }
 
-/* ===== EXPERIENCE SECTION ===== */
+/* ===== EXPERIENCES ===== */
+.exp-filter-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0;
+  font-size: 9px;
+}
+
 .exp-columns {
   display: flex;
   gap: 32px;
@@ -303,11 +282,11 @@ ul[role="menu-bar"] a {
   min-width: 0;
 }
 
-.exp-col h3 {
-  font-size: 14px;
-  margin: 20px 0 10px 0;
-  border-bottom: 2px solid #000;
-  padding-bottom: 4px;
+.exp-phase h3 {
+  font-size: 10px;
+  margin: 24px 0 12px 0;
+  border-bottom: 4px solid #000;
+  padding-bottom: 6px;
 }
 
 .exp-phase:first-child h3 {
@@ -320,56 +299,72 @@ ul[role="menu-bar"] a {
 
 .exp-table {
   width: 100%;
-  font-size: 12px;
-  border-collapse: collapse;
+  font-size: 8px;
 }
 
 .exp-table td {
-  padding: 6px 10px 6px 0;
   vertical-align: top;
-  border-bottom: 1px dotted #ccc;
-}
-
-.exp-table tr:last-child td {
-  border-bottom: none;
+  padding: 8px;
+  line-height: 2;
 }
 
 .exp-year {
   white-space: nowrap;
-  width: 90px;
+  width: 80px;
   font-weight: bold;
+  font-size: 7px;
 }
 
-/* ===== HOBBIES GALLERY ===== */
+/* ===== HOBBIES ===== */
 .hobbies-gallery {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 16px;
 }
 
 .hobby-item {
-  flex: 1 1 280px;
-  max-width: 320px;
+  flex: 1 1 240px;
+  max-width: 300px;
+  text-align: center;
 }
 
-.hobby-img-frame {
-  border: 3px solid #000;
-  box-shadow: inset 1px 1px 0 #808080, inset -1px -1px 0 #dfdfdf, 2px 2px 0 #000;
-  padding: 4px;
-  background: #fff;
+.hobby-frame {
+  padding: 8px !important;
 }
 
-.hobby-img-frame img {
+.hobby-frame img {
   width: 100%;
-  height: 220px;
+  height: 200px;
   object-fit: cover;
   display: block;
 }
 
 .hobby-caption {
-  margin-top: 0;
-  font-size: 11px;
+  font-size: 8px;
+  margin-top: 10px;
+  line-height: 2;
+}
+
+/* ===== FOOTER ===== */
+#footer-info {
+  margin-top: 8px;
+}
+
+#footer-info .nes-container {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+#footer-info h1 {
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+#footer-info p {
+  font-size: 9px;
+  margin: 8px 0;
 }
 
 /* ===== CONTACT MODAL ===== */
@@ -379,106 +374,77 @@ ul[role="menu-bar"] a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1999;
 }
 
-#contact {
+.modal-dialog {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2000;
-  width: 34rem;
+  width: 500px;
   max-width: 95%;
+  background: #fff;
 }
 
-#contact .field-row label {
-  min-width: 90px;
+.contact-table {
+  width: 100%;
+  font-size: 9px;
+  border-collapse: collapse;
+  margin-bottom: 16px;
 }
 
-#contact .field-row a {
-  color: #000;
+.contact-table td {
+  padding: 8px 0;
+  vertical-align: top;
+  line-height: 2;
 }
 
-/* ===== FOOTER STANDARD DIALOG ===== */
-#footer-info {
-  width: 28rem;
-  max-width: 90%;
+.contact-table td:first-child {
+  white-space: nowrap;
+  padding-right: 20px;
 }
 
-#footer-info .dialog-text {
-  text-align: center;
+.contact-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 8px;
 }
 
-/* ===== GENERAL TYPOGRAPHY ===== */
-.window-pane p {
-  font-size: 13px;
-  line-height: 1.6;
-  margin: 6px 0;
+.contact-actions .nes-btn {
+  font-size: 9px !important;
 }
 
-.window-pane em {
-  font-size: 12px;
-}
-
-/* (no stagger — windows aligned center) */
-
-/* About left: photo stacks on smaller desktop */
-@media (max-width: 900px) {
-  .about-left {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+/* ===== GENERAL ===== */
+.nes-container > p {
+  font-size: 9px;
+  line-height: 2.2;
 }
 
 /* ===== RESPONSIVE: TABLET ===== */
-@media (max-width: 768px) {
-  .desktop {
-    padding: 16px;
-    gap: 20px;
-  }
-
-  .window,
-  #technologies,
-  #experiences,
-  #studies,
-  #hobbies {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  #welcome {
-    width: 100% !important;
-  }
-
-  #footer-info {
-    width: 100% !important;
-  }
-
+@media (max-width: 900px) {
   .about-layout {
     flex-direction: column;
-    align-items: stretch;
-  }
-
-  .about-left {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .about-photo img {
-    width: 150px;
-    height: 150px;
   }
 
   .about-datasheet {
     width: 100%;
   }
 
-  .window-pane .field-row {
-    flex-wrap: wrap;
+  .about-left {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-wrapper {
+    padding: 20px 12px 48px;
+    gap: 24px;
   }
 
   .tech-columns,
@@ -488,61 +454,63 @@ ul[role="menu-bar"] a {
   }
 
   .skill-label {
-    min-width: 110px !important;
+    min-width: 90px;
   }
 
   .skill-detail {
-    margin-left: 112px;
+    margin-left: 98px;
   }
 
-  .hobbies-gallery {
+  .nav-brand {
+    font-size: 11px;
+  }
+
+  .nav-links .nes-btn {
+    font-size: 7px !important;
+    padding: 4px 8px !important;
+  }
+
+  .welcome-inner {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
   }
-
-  .hobby-item {
-    flex: 0 1 100%;
-    max-width: 100%;
-  }
-
-  .hobby-img-frame img {
-    height: 200px;
-  }
-
-  .details-bar {
-    flex-wrap: wrap;
-    gap: 4px;
-  }
-
 }
 
 /* ===== RESPONSIVE: PHONE ===== */
 @media (max-width: 480px) {
-  .about-photo img {
+  .nav-links {
+    gap: 4px;
+  }
+
+  .about-photo {
     width: 120px;
     height: 120px;
   }
 
-  .hobby-img-frame img {
+  .hobby-frame img {
     height: 160px;
   }
 
   .skill-label {
-    min-width: 90px !important;
-    font-size: 11px !important;
+    min-width: 76px;
+    font-size: 7px;
+  }
+
+  .skill-pct {
+    font-size: 7px;
   }
 
   .skill-detail {
-    margin-left: 92px;
-    font-size: 9px;
+    margin-left: 84px;
+    font-size: 6px;
   }
 
   .exp-year {
-    width: 75px;
-    font-size: 11px;
+    width: 65px;
+    font-size: 6px;
   }
 
-  .tech-filter-row label {
-    font-size: 11px;
+  .exp-table {
+    font-size: 7px;
   }
 }
