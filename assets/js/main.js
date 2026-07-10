@@ -1,6 +1,17 @@
 (function () {
   'use strict';
 
+  // S60 clock
+  function updateClock() {
+    var now = new Date();
+    var h = String(now.getHours()).padStart(2, '0');
+    var m = String(now.getMinutes()).padStart(2, '0');
+    var el = document.getElementById('s60-clock');
+    if (el) el.textContent = h + ':' + m;
+  }
+  updateClock();
+  setInterval(updateClock, 30000);
+
   // Smooth scroll for nav anchor links
   document.querySelectorAll('#main-nav a[href^="#"]').forEach(function (link) {
     link.addEventListener('click', function (e) {
@@ -14,6 +25,11 @@
       if (target) {
         e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Update active tab
+        document.querySelectorAll('#main-nav .nav-links a').forEach(function (a) {
+          a.classList.remove('s60-active');
+        });
+        this.classList.add('s60-active');
       }
     });
   });
@@ -48,6 +64,19 @@
   var closeBtn = document.getElementById('contact-close-btn');
   if (closeBtn) closeBtn.addEventListener('click', hideContact);
 
+  // Softkey bar
+  var softkeyOptions = document.getElementById('softkey-options');
+  if (softkeyOptions) {
+    softkeyOptions.addEventListener('click', showContact);
+  }
+
+  var softkeyBack = document.getElementById('softkey-back');
+  if (softkeyBack) {
+    softkeyBack.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
   // Technology checkbox filters
   document.querySelectorAll('input[name="tech-filter"]').forEach(function (chk) {
     chk.addEventListener('change', function () {
@@ -69,5 +98,26 @@
       });
     });
   }
+
+  // Update active nav on scroll
+  var sections = ['about', 'studies', 'technologies', 'experiences', 'hobbies'];
+  var navLinks = document.querySelectorAll('#main-nav .nav-links a[href^="#"]');
+
+  function onScroll() {
+    var scrollY = window.scrollY + 80;
+    var current = '';
+    sections.forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el && el.offsetTop <= scrollY) {
+        current = id;
+      }
+    });
+    navLinks.forEach(function (a) {
+      if (a.getAttribute('href') === '#contact') return;
+      a.classList.toggle('s60-active', a.getAttribute('href') === '#' + current);
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
 
 })();
