@@ -1,49 +1,18 @@
 (function () {
   'use strict';
 
-  // Palm clock
+  // Workbench clock
   function updateClock() {
     var now = new Date();
     var h = String(now.getHours()).padStart(2, '0');
     var m = String(now.getMinutes()).padStart(2, '0');
-    var el = document.getElementById('palm-clock');
+    var el = document.getElementById('wb-clock');
     if (el) el.textContent = h + ':' + m;
   }
   updateClock();
   setInterval(updateClock, 30000);
 
-  // Smooth scroll for nav anchor links
-  document.querySelectorAll('#main-nav a[href^="#"]').forEach(function (link) {
-    link.addEventListener('click', function (e) {
-      var targetId = this.getAttribute('href');
-      if (targetId === '#contact') {
-        e.preventDefault();
-        showContact();
-        return;
-      }
-      var target = document.querySelector(targetId);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        // Update active tab
-        document.querySelectorAll('#main-nav .palm-tab').forEach(function (a) {
-          a.classList.remove('palm-tab-active');
-        });
-        this.classList.add('palm-tab-active');
-      }
-    });
-  });
-
-  // Welcome continue button
-  var continueBtn = document.getElementById('welcome-continue-btn');
-  if (continueBtn) {
-    continueBtn.addEventListener('click', function () {
-      var about = document.getElementById('about');
-      if (about) about.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  }
-
-  // Contact modal
+  // Contact requestor
   function showContact() {
     var modal = document.getElementById('contact');
     var overlay = document.getElementById('modal-overlay');
@@ -64,23 +33,23 @@
   var closeBtn = document.getElementById('contact-close-btn');
   if (closeBtn) closeBtn.addEventListener('click', hideContact);
 
-  // Silk screen buttons
-  var silkHome = document.getElementById('silk-home');
-  if (silkHome) {
-    silkHome.addEventListener('click', function () {
+  // Shell bar buttons
+  var btnHome = document.getElementById('wb-btn-home');
+  if (btnHome) {
+    btnHome.addEventListener('click', function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 
-  var silkMenu = document.getElementById('silk-menu');
-  if (silkMenu) {
-    silkMenu.addEventListener('click', showContact);
+  var btnMenu = document.getElementById('wb-btn-menu');
+  if (btnMenu) {
+    btnMenu.addEventListener('click', showContact);
   }
 
-  // Palm titlebar jump-to
-  var palmJump = document.getElementById('palm-jump');
-  if (palmJump) {
-    palmJump.addEventListener('change', function () {
+  // Screen bar jump-to
+  var wbJump = document.getElementById('wb-jump');
+  if (wbJump) {
+    wbJump.addEventListener('change', function () {
       var id = this.value;
       if (id) {
         var el = document.getElementById(id);
@@ -112,13 +81,13 @@
     });
   }
 
-  // Palm Graffiti search
-  var searchInput = document.getElementById('palm-search');
-  var searchClear = document.getElementById('palm-search-clear');
+  // Shell search
+  var searchInput = document.getElementById('wb-search');
+  var searchClear = document.getElementById('wb-search-clear');
   var searchTimer = null;
 
   function clearHighlights() {
-    document.querySelectorAll('mark.palm-highlight').forEach(function (m) {
+    document.querySelectorAll('mark.wb-highlight').forEach(function (m) {
       var parent = m.parentNode;
       parent.replaceChild(document.createTextNode(m.textContent), m);
       parent.normalize();
@@ -136,7 +105,7 @@
       var parent = node.parentNode;
       if (!parent || parent.tagName === 'SCRIPT' || parent.tagName === 'STYLE' ||
           parent.tagName === 'INPUT' || parent.tagName === 'SELECT' ||
-          parent.classList.contains('palm-graffiti-input')) return;
+          parent.classList.contains('wb-shell-field')) return;
       var text = node.textContent;
       var idx = text.toLowerCase().indexOf(lower);
       if (idx === -1) return;
@@ -145,7 +114,7 @@
       while (idx !== -1) {
         frag.appendChild(document.createTextNode(text.substring(lastIdx, idx)));
         var mark = document.createElement('mark');
-        mark.className = 'palm-highlight';
+        mark.className = 'wb-highlight';
         mark.textContent = text.substring(idx, idx + term.length);
         frag.appendChild(mark);
         count++;
@@ -166,9 +135,9 @@
       searchTimer = setTimeout(function () {
         clearHighlights();
         if (val.length >= 2) {
-          var count = highlightText(document.querySelector('.page-wrapper'), val);
+          var count = highlightText(document.querySelector('.wb-desktop'), val);
           if (count > 0) {
-            var first = document.querySelector('mark.palm-highlight');
+            var first = document.querySelector('mark.wb-highlight');
             if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
           }
         }
@@ -184,26 +153,5 @@
       searchInput.focus();
     });
   }
-
-  // Update active nav tab on scroll
-  var sections = ['about', 'studies', 'technologies', 'experiences', 'hobbies'];
-  var navTabs = document.querySelectorAll('#main-nav .palm-tab');
-
-  function onScroll() {
-    var scrollY = window.scrollY + 60;
-    var current = '';
-    sections.forEach(function (id) {
-      var el = document.getElementById(id);
-      if (el && el.offsetTop <= scrollY) {
-        current = id;
-      }
-    });
-    navTabs.forEach(function (a) {
-      if (a.classList.contains('palm-tab-action')) return;
-      a.classList.toggle('palm-tab-active', a.getAttribute('href') === '#' + current);
-    });
-  }
-
-  window.addEventListener('scroll', onScroll, { passive: true });
 
 })();

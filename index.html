@@ -13,12 +13,13 @@
 
 <body>
 
-  <!-- ===== PALM TITLE BAR ===== -->
-  <div class="palm-titlebar">
-    <span class="palm-titlebar-name">&#9733; Tasnadi CV</span>
-    <span class="palm-titlebar-right">
-      <span class="palm-clock" id="palm-clock"></span>
-      <select class="palm-titlebar-cat" id="palm-jump">
+  <!-- ===== SCREEN BAR ===== -->
+  <div class="wb-screenbar">
+    <span class="wb-screenbar-title">&#9733; Tasnadi CV</span>
+    <div class="wb-screenbar-dragbar"></div>
+    <span class="wb-screenbar-right">
+      <span class="wb-clock" id="wb-clock"></span>
+      <select class="wb-screenbar-select" id="wb-jump">
         <option value="">&#9660; Jump to...</option>
         <option value="about">About</option>
         <option value="studies">Studies</option>
@@ -27,55 +28,15 @@
         <option value="hobbies">Hobbies</option>
       </select>
     </span>
+    <div class="wb-screenbar-depth"></div>
   </div>
 
-  <!-- ===== NAV (Palm menu bar) ===== -->
-  <nav id="main-nav">
-    <div class="nav-links">
-      <a href="#about" class="palm-tab palm-tab-active">About</a>
-      <a href="#studies" class="palm-tab">Studies</a>
-      <a href="#technologies" class="palm-tab">Tech</a>
-      <a href="#experiences" class="palm-tab">XP</a>
-      <a href="#hobbies" class="palm-tab">Hobbies</a>
-      <a href="#contact" class="palm-tab palm-tab-action" id="contact-nav-btn">Contact</a>
-    </div>
-  </nav>
-
-  <!-- ===== HERO (full-width, outside page-wrapper) ===== -->
-  <section id="welcome" class="palm-hero">
-    <div class="palm-hero-scanlines"></div>
-    <div class="palm-hero-content">
-      <div class="palm-hero-avatar-wrap">
-        <img src="assets/img/profile-img.jpg" alt="Zsolt Tasnádi" class="palm-hero-avatar">
-        <div class="palm-hero-status">&#9679; online</div>
-      </div>
-      <div class="palm-hero-text">
-        <div class="palm-hero-label">&#9733; Application Info</div>
-        <h1 class="palm-hero-name">Zsolt Tasnadi</h1>
-        <div class="palm-hero-roles">
-          <span class="palm-hero-role">Software Architect</span>
-          <span class="palm-hero-dot">&bull;</span>
-          <span class="palm-hero-role">DevOps Expert</span>
-          <span class="palm-hero-dot">&bull;</span>
-          <span class="palm-hero-role">Programmer</span>
-        </div>
-        <div class="palm-hero-meta">
-          <span>&#9872; Szeged, Hungary</span>
-          <span class="palm-hero-sep">|</span>
-          <span>&#9200; 20+ years experience</span>
-        </div>
-        <div class="palm-hero-tagline">Building the web since 1999</div>
-      </div>
-    </div>
-    <div class="palm-hero-version">v26.07 &mdash; teletype.hu</div>
-  </section>
-
-  <main class="page-wrapper">
+  <main class="wb-desktop">
 
     <!-- ===== ABOUT ===== -->
-    <div class="palm-panel" id="about">
-      <div class="palm-panel-header">About Me</div>
-      <div class="palm-panel-body">
+    <div class="wb-panel" id="about">
+      <div class="wb-panel-title">About Me</div>
+      <div class="wb-panel-body">
         <div class="about-layout">
           <div class="about-left">
             <img src="assets/img/profile-img.jpg" alt="Zsolt Tasnádi" class="about-photo" loading="lazy">
@@ -93,7 +54,7 @@
             </div>
           </div>
           <div class="about-datasheet">
-            <div class="palm-list-header">Stats</div>
+            <div class="wb-section-header">Stats</div>
             <table class="about-stats-table">
               <tr><td>Birthday</td><td>1987.06.16</td></tr>
               <tr><td>Birthplace</td><td>Budapest</td></tr>
@@ -104,9 +65,9 @@
               <tr><td>Web</td><td><a href="https://www.teletype.hu" target="_blank">teletype.hu</a></td></tr>
             </table>
             <div class="about-social">
-              <a href="https://facebook.com/rastasizsolt" class="palm-btn palm-btn-sm" target="_blank">FB</a>
-              <a href="https://www.instagram.com/rastasi" class="palm-btn palm-btn-sm" target="_blank">IG</a>
-              <a href="https://www.linkedin.com/in/rastasizsolt" class="palm-btn palm-btn-sm palm-btn-primary" target="_blank">LI</a>
+              <a href="https://facebook.com/rastasizsolt" class="wb-btn wb-btn-sm" target="_blank">FB</a>
+              <a href="https://www.instagram.com/rastasi" class="wb-btn wb-btn-sm" target="_blank">IG</a>
+              <a href="https://www.linkedin.com/in/rastasizsolt" class="wb-btn wb-btn-sm wb-btn-primary" target="_blank">LI</a>
             </div>
           </div>
         </div>
@@ -114,15 +75,15 @@
     </div>
 
     <!-- ===== STUDIES ===== -->
-    <div class="palm-panel" id="studies">
-      <div class="palm-panel-header">Studies</div>
-      <div class="palm-panel-body">
+    <div class="wb-panel" id="studies">
+      <div class="wb-panel-title">Studies</div>
+      <div class="wb-panel-body">
         <p>
           My orientation is basically technical, I have loved the electronic world since my childhood, but besides
           that, I love to work with people, especially with children. I have a strong sense of how to teach and
           present any topic. I'm a system administrator and a Waldorf teacher as well.
         </p>
-        <table class="palm-table studies-table">
+        <table class="wb-table studies-table">
           <thead>
             <tr><th>Period</th><th>Institution &amp; Degree</th></tr>
           </thead>
@@ -154,9 +115,9 @@
     </div>
 
     <!-- ===== TECHNOLOGIES ===== -->
-    <div class="palm-panel" id="technologies">
-      <div class="palm-panel-header">Technologies</div>
-      <div class="palm-panel-body">
+    <div class="wb-panel" id="technologies">
+      <div class="wb-panel-title">Technologies</div>
+      <div class="wb-panel-body">
         <p>
           Over the last 20 years, I have worked with many technologies. Whenever I have an idea or a new job, I always
           concentrate on finding solutions, not on the technology stack which provides them. I have the courage and
@@ -176,65 +137,65 @@
           <div class="tech-col">
 
             <div class="tech-category" data-category="backend">
-              <div class="palm-list-header">Backend Programming</div>
+              <div class="wb-section-header">Backend Programming</div>
               <div class="skill-row">
                 <span class="skill-label">Databases</span>
-                <div class="palm-progress"><div class="palm-progress-fill palm-fill-green" style="width:90%"></div></div>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-green" style="width:90%"></div></div>
                 <span class="skill-pct">90%</span>
               </div>
               <p class="skill-detail">MySQL/MariaDB, Postgres, MongoDB, ElasticSearch</p>
               <div class="skill-row">
                 <span class="skill-label">Node.js</span>
-                <div class="palm-progress"><div class="palm-progress-fill palm-fill-blue" style="width:95%"></div></div>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-blue" style="width:95%"></div></div>
                 <span class="skill-pct">95%</span>
               </div>
               <p class="skill-detail">TypeScript, Express, Sequelize, Mongoose, Knex</p>
               <div class="skill-row">
                 <span class="skill-label">Ruby</span>
-                <div class="palm-progress"><div class="palm-progress-fill palm-fill-dark" style="width:100%"></div></div>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-dark" style="width:100%"></div></div>
                 <span class="skill-pct">100%</span>
               </div>
               <p class="skill-detail">Rails, Sinatra, Padrino, Grape, Rack::App</p>
               <div class="skill-row">
                 <span class="skill-label">Golang</span>
-                <div class="palm-progress"><div class="palm-progress-fill palm-fill-blue" style="width:85%"></div></div>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-blue" style="width:85%"></div></div>
                 <span class="skill-pct">85%</span>
               </div>
               <div class="skill-row">
                 <span class="skill-label">Python</span>
-                <div class="palm-progress"><div class="palm-progress-fill palm-fill-green" style="width:65%"></div></div>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-green" style="width:65%"></div></div>
                 <span class="skill-pct">65%</span>
               </div>
               <p class="skill-detail">Django, Flask</p>
               <div class="skill-row">
                 <span class="skill-label">PHP</span>
-                <div class="palm-progress"><div class="palm-progress-fill palm-fill-red" style="width:70%"></div></div>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-red" style="width:70%"></div></div>
                 <span class="skill-pct">70%</span>
               </div>
               <p class="skill-detail">Drupal (5.x, 6.x, 7.x)</p>
             </div>
 
             <div class="tech-category" data-category="frontend">
-              <div class="palm-list-header">Frontend Programming</div>
+              <div class="wb-section-header">Frontend Programming</div>
               <div class="skill-row">
                 <span class="skill-label">HTML, CSS</span>
-                <div class="palm-progress"><div class="palm-progress-fill palm-fill-dark" style="width:100%"></div></div>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-dark" style="width:100%"></div></div>
                 <span class="skill-pct">100%</span>
               </div>
               <div class="skill-row">
                 <span class="skill-label">CSS Frameworks</span>
-                <div class="palm-progress"><div class="palm-progress-fill palm-fill-green" style="width:75%"></div></div>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-green" style="width:75%"></div></div>
                 <span class="skill-pct">75%</span>
               </div>
               <p class="skill-detail">Foundation, Bootstrap, Material UI</p>
               <div class="skill-row">
                 <span class="skill-label">Vue.js</span>
-                <div class="palm-progress"><div class="palm-progress-fill palm-fill-blue" style="width:85%"></div></div>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-blue" style="width:85%"></div></div>
                 <span class="skill-pct">85%</span>
               </div>
               <div class="skill-row">
                 <span class="skill-label">React.js</span>
-                <div class="palm-progress"><div class="palm-progress-fill palm-fill-blue" style="width:70%"></div></div>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-blue" style="width:70%"></div></div>
                 <span class="skill-pct">70%</span>
               </div>
             </div>
@@ -243,81 +204,81 @@
           <div class="tech-col">
 
             <div class="tech-category" data-category="devops">
-              <div class="palm-list-header">DevOps</div>
+              <div class="wb-section-header">DevOps</div>
               <div class="skill-row">
                 <span class="skill-label">Docker</span>
-                <div class="palm-progress"><div class="palm-progress-fill palm-fill-blue" style="width:95%"></div></div>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-blue" style="width:95%"></div></div>
                 <span class="skill-pct">95%</span>
               </div>
               <p class="skill-detail">Docker, Compose, Swarm</p>
               <div class="skill-row">
                 <span class="skill-label">Orchestration</span>
-                <div class="palm-progress"><div class="palm-progress-fill palm-fill-green" style="width:65%"></div></div>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-green" style="width:65%"></div></div>
                 <span class="skill-pct">65%</span>
               </div>
               <p class="skill-detail">Kubernetes, Helm, Ansible, Terraform</p>
               <div class="skill-row">
                 <span class="skill-label">Sysadmin</span>
-                <div class="palm-progress"><div class="palm-progress-fill palm-fill-dark" style="width:100%"></div></div>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-dark" style="width:100%"></div></div>
                 <span class="skill-pct">100%</span>
               </div>
               <p class="skill-detail">Debian/Ubuntu, ISPConfig3, VMware, Jenkins, PM2</p>
             </div>
 
             <div class="tech-category" data-category="brokers">
-              <div class="palm-list-header">Message Brokers</div>
+              <div class="wb-section-header">Message Brokers</div>
               <div class="skill-row">
                 <span class="skill-label">RabbitMQ</span>
-                <div class="palm-progress"><div class="palm-progress-fill palm-fill-blue" style="width:70%"></div></div>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-blue" style="width:70%"></div></div>
                 <span class="skill-pct">70%</span>
               </div>
               <div class="skill-row">
                 <span class="skill-label">MQTT</span>
-                <div class="palm-progress"><div class="palm-progress-fill palm-fill-green" style="width:80%"></div></div>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-green" style="width:80%"></div></div>
                 <span class="skill-pct">80%</span>
               </div>
               <div class="skill-row">
                 <span class="skill-label">NATS</span>
-                <div class="palm-progress"><div class="palm-progress-fill palm-fill-green" style="width:80%"></div></div>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-green" style="width:80%"></div></div>
                 <span class="skill-pct">80%</span>
               </div>
             </div>
 
             <div class="tech-category" data-category="other">
-              <div class="palm-list-header">Other Technologies</div>
+              <div class="wb-section-header">Other Technologies</div>
               <div class="skill-row">
                 <span class="skill-label">Pascal/Delphi</span>
-                <div class="palm-progress"><div class="palm-progress-fill palm-fill-red" style="width:30%"></div></div>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-red" style="width:30%"></div></div>
                 <span class="skill-pct">30%</span>
               </div>
               <div class="skill-row">
                 <span class="skill-label">ESP32, C++</span>
-                <div class="palm-progress"><div class="palm-progress-fill palm-fill-dark" style="width:50%"></div></div>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-dark" style="width:50%"></div></div>
                 <span class="skill-pct">50%</span>
               </div>
             </div>
 
             <div class="tech-category" data-category="other">
-              <div class="palm-list-header">AI Knowledge</div>
+              <div class="wb-section-header">AI Knowledge</div>
               <div class="skill-row">
                 <span class="skill-label">Claude</span>
-                <div class="palm-progress"><div class="palm-progress-fill palm-fill-blue" style="width:85%"></div></div>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-blue" style="width:85%"></div></div>
                 <span class="skill-pct">85%</span>
               </div>
               <p class="skill-detail">Skills, Marketplaces, MCP</p>
               <div class="skill-row">
                 <span class="skill-label">Gemini</span>
-                <div class="palm-progress"><div class="palm-progress-fill palm-fill-green" style="width:60%"></div></div>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-green" style="width:60%"></div></div>
                 <span class="skill-pct">60%</span>
               </div>
               <div class="skill-row">
                 <span class="skill-label">Ollama</span>
-                <div class="palm-progress"><div class="palm-progress-fill palm-fill-blue" style="width:50%"></div></div>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-blue" style="width:50%"></div></div>
                 <span class="skill-pct">50%</span>
               </div>
               <div class="skill-row">
                 <span class="skill-label">LM Studio</span>
-                <div class="palm-progress"><div class="palm-progress-fill palm-fill-blue" style="width:50%"></div></div>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-blue" style="width:50%"></div></div>
                 <span class="skill-pct">50%</span>
               </div>
             </div>
@@ -328,9 +289,9 @@
     </div>
 
     <!-- ===== EXPERIENCES ===== -->
-    <div class="palm-panel" id="experiences">
-      <div class="palm-panel-header">Experiences</div>
-      <div class="palm-panel-body">
+    <div class="wb-panel" id="experiences">
+      <div class="wb-panel-title">Experiences</div>
+      <div class="wb-panel-body">
         <p>
           I have had a number of jobs in different positions and different kinds of company over the years. In the
           last few years, I have founded and worked with a couple of startups. I relish this world and working with
@@ -338,7 +299,7 @@
         </p>
         <div class="exp-filter-row">
           <strong>Phase:</strong>
-          <select id="exp-filter" class="palm-select">
+          <select id="exp-filter" class="wb-select">
             <option value="all">All Phases</option>
             <option value="early">Early Years</option>
             <option value="fulltime">Full-time Career</option>
@@ -351,8 +312,8 @@
           <div class="exp-col">
 
             <div class="exp-phase" data-phase="early">
-              <div class="palm-list-header">Early Years</div>
-              <table class="palm-table exp-table">
+              <div class="wb-section-header">Early Years</div>
+              <table class="wb-table exp-table">
                 <tr>
                   <td class="exp-year">2004&ndash;2008</td>
                   <td><strong>G&ouml;d&ouml;ll&#337; Waldorf School</strong><br><em>sysadmin and webmaster</em></td>
@@ -369,8 +330,8 @@
             </div>
 
             <div class="exp-phase" data-phase="fulltime">
-              <div class="palm-list-header">Full-time Career</div>
-              <table class="palm-table exp-table">
+              <div class="wb-section-header">Full-time Career</div>
+              <table class="wb-table exp-table">
                 <tr>
                   <td class="exp-year">2012&ndash;2014</td>
                   <td><strong>PPT Group Ltd</strong><br><em>Ruby programmer (VOIP, XMPP expert)</em></td>
@@ -398,8 +359,8 @@
           <div class="exp-col">
 
             <div class="exp-phase" data-phase="startup">
-              <div class="palm-list-header">Startup Career</div>
-              <table class="palm-table exp-table">
+              <div class="wb-section-header">Startup Career</div>
+              <table class="wb-table exp-table">
                 <tr>
                   <td class="exp-year">2016&ndash;2017</td>
                   <td><strong>Addventure Ltd</strong><br><em>co-founder, lead developer (Rails, Express, React.js)</em></td>
@@ -432,8 +393,8 @@
             </div>
 
             <div class="exp-phase" data-phase="current">
-              <div class="palm-list-header">Post-startup &amp; Current</div>
-              <table class="palm-table exp-table">
+              <div class="wb-section-header">Post-startup &amp; Current</div>
+              <table class="wb-table exp-table">
                 <tr>
                   <td class="exp-year">2023&ndash;2025</td>
                   <td><strong>PublishDrive Ltd</strong><br><em>Engineering Team Lead (PHP, Laravel, Python, FastAPI, K8s, RabbitMQ)</em></td>
@@ -459,9 +420,9 @@
     </div>
 
     <!-- ===== HOBBIES ===== -->
-    <div class="palm-panel" id="hobbies">
-      <div class="palm-panel-header">Hobbies</div>
-      <div class="palm-panel-body">
+    <div class="wb-panel" id="hobbies">
+      <div class="wb-panel-title">Hobbies</div>
+      <div class="wb-panel-body">
         <p>
           I have an interest in many different topics, for example, alternative operating systems and IT history. I
           have a collection of old game consoles. I love human topics as well, especially history and theology. I'm a
@@ -491,35 +452,33 @@
     </div>
 
     <!-- ===== FOOTER ===== -->
-    <footer id="footer-info" class="palm-footer">
-      <div class="palm-footer-inner">
-        <div class="palm-footer-top">
-          <div class="palm-footer-brand">
-            <span class="palm-footer-logo">&#9733;</span>
+    <footer class="wb-panel" id="footer-info">
+      <div class="wb-panel-title">System Information</div>
+      <div class="wb-panel-body">
+        <div class="wb-footer-body">
+          <div class="wb-footer-brand">
+            <span class="wb-footer-logo">&#9733;</span>
             <div>
-              <div class="palm-footer-name">Zsolt Tasnadi</div>
-              <div class="palm-footer-title">Programmer &bull; DevOps &bull; Architect</div>
+              <div class="wb-footer-name">Zsolt Tasnadi</div>
+              <div class="wb-footer-title">Programmer &bull; DevOps &bull; Architect</div>
             </div>
           </div>
-          <div class="palm-footer-links">
+          <div class="wb-footer-links">
             <a href="mailto:rastasi@gmail.com">rastasi@gmail.com</a>
             <a href="https://www.teletype.hu" target="_blank">teletype.hu</a>
           </div>
         </div>
-        <div class="palm-footer-divider"></div>
-        <div class="palm-footer-bottom">
-          <span class="palm-footer-copy">&copy; 2004&ndash;2026 Zsolt Tasnadi</span>
-        </div>
+        <div class="wb-footer-copy">&copy; 2004&ndash;2026 Zsolt Tasnadi</div>
       </div>
     </footer>
 
   </main>
 
-  <!-- ===== CONTACT MODAL ===== -->
+  <!-- ===== CONTACT REQUESTOR ===== -->
   <div class="modal-overlay" id="modal-overlay" style="display: none;"></div>
-  <div class="palm-panel modal-dialog" id="contact" style="display: none;">
-    <div class="palm-panel-header">Contact</div>
-    <div class="palm-panel-body">
+  <div class="wb-requestor" id="contact" style="display: none;">
+    <div class="wb-panel-title">Contact</div>
+    <div class="wb-panel-body">
       <table class="contact-table">
         <tr><td><strong>Email:</strong></td><td><a href="mailto:rastasi@gmail.com">rastasi@gmail.com</a></td></tr>
         <tr><td><strong>Phone:</strong></td><td>+3620-489-35-35</td></tr>
@@ -527,23 +486,23 @@
         <tr><td><strong>Location:</strong></td><td>Szeged, Hungary</td></tr>
       </table>
       <div class="contact-actions">
-        <a href="mailto:rastasi@gmail.com" class="palm-btn palm-btn-primary">Send Email</a>
-        <button type="button" class="palm-btn" id="contact-close-btn">Close</button>
+        <a href="mailto:rastasi@gmail.com" class="wb-btn wb-btn-primary">Send Email</a>
+        <button type="button" class="wb-btn" id="contact-close-btn">Close</button>
       </div>
     </div>
   </div>
 
-  <!-- ===== PALM SILK SCREEN (Graffiti area) ===== -->
-  <div class="palm-silk">
-    <div class="palm-silk-buttons">
-      <button class="palm-silk-btn" id="silk-home" title="Home">&#9750;</button>
-      <button class="palm-silk-btn" id="silk-menu" title="Menu">&#9776;</button>
-      <button class="palm-silk-btn" id="silk-find" title="Find">&#9740;</button>
+  <!-- ===== SHELL BAR ===== -->
+  <div class="wb-shell-bar">
+    <div class="wb-shell-buttons">
+      <button class="wb-shell-btn" id="wb-btn-home" title="Home">&#9650;</button>
+      <button class="wb-shell-btn" id="wb-btn-menu" title="Menu">&#9776;</button>
+      <button class="wb-shell-btn" id="wb-btn-find" title="Find">&#9740;</button>
     </div>
-    <div class="palm-graffiti" id="palm-graffiti">
-      <span class="palm-graffiti-icon">&#9740;</span>
-      <input type="text" class="palm-graffiti-input" id="palm-search" placeholder="Find on page...">
-      <button class="palm-graffiti-clear" id="palm-search-clear" title="Clear">&times;</button>
+    <div class="wb-shell-input" id="wb-search-area">
+      <span class="wb-shell-prompt">1.&gt;</span>
+      <input type="text" class="wb-shell-field" id="wb-search" placeholder="Search...">
+      <button class="wb-shell-clear" id="wb-search-clear" title="Clear">&times;</button>
     </div>
   </div>
 
