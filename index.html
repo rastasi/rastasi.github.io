@@ -113,7 +113,8 @@
         <p>
           Over the last 20 years, I have worked with many technologies. Whenever I have an idea or a new job, I always
           concentrate on finding solutions, not on the technology stack which provides them. I have the courage and
-          curiosity to learn new languages and frameworks.
+          curiosity to learn new languages and frameworks. Whatever the stack, I apply the same principles: clear
+          layers, pinned dependencies, documented public APIs and reproducible CI builds.
         </p>
 
         <div class="tech-columns">
@@ -138,7 +139,7 @@
                 <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-dark" style="width:100%"></div></div>
                 <span class="skill-pct">100%</span>
               </div>
-              <p class="skill-detail">Rails, Sinatra, Padrino, Grape, Rack::App</p>
+              <p class="skill-detail">Rails, Sinatra, Padrino, Grape, Rack::App, own gems (rubbs BBS framework, warp_engine)</p>
               <div class="skill-row">
                 <span class="skill-label">Golang</span>
                 <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-blue" style="width:85%"></div></div>
@@ -181,6 +182,12 @@
                 <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-blue" style="width:70%"></div></div>
                 <span class="skill-pct">70%</span>
               </div>
+              <div class="skill-row">
+                <span class="skill-label">TypeScript</span>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-blue" style="width:85%"></div></div>
+                <span class="skill-pct">85%</span>
+              </div>
+              <p class="skill-detail">VS Code extensions, Electron</p>
             </div>
 
           </div>
@@ -205,7 +212,13 @@
                 <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-dark" style="width:100%"></div></div>
                 <span class="skill-pct">100%</span>
               </div>
-              <p class="skill-detail">Debian/Ubuntu, ISPConfig3, VMware, Jenkins, PM2</p>
+              <p class="skill-detail">Debian/Ubuntu, ISPConfig3, VMware, Gitea, Woodpecker CI, Authentik SSO</p>
+              <div class="skill-row">
+                <span class="skill-label">Observability</span>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-green" style="width:75%"></div></div>
+                <span class="skill-pct">75%</span>
+              </div>
+              <p class="skill-detail">Grafana, Alloy, Loki, Uptime Kuma, Matomo</p>
             </div>
 
             <div class="tech-category" data-category="brokers">
@@ -239,6 +252,19 @@
                 <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-dark" style="width:50%"></div></div>
                 <span class="skill-pct">50%</span>
               </div>
+              <p class="skill-detail">ESP32, C++ for DOS (Open Watcom)</p>
+              <div class="skill-row">
+                <span class="skill-label">6502 Assembly</span>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-blue" style="width:60%"></div></div>
+                <span class="skill-pct">60%</span>
+              </div>
+              <p class="skill-detail">ACME, cc65 (Commodore 64, Plus/4)</p>
+              <div class="skill-row">
+                <span class="skill-label">Lua</span>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-green" style="width:70%"></div></div>
+                <span class="skill-pct">70%</span>
+              </div>
+              <p class="skill-detail">TIC-80</p>
             </div>
 
             <div class="tech-category" data-category="other">
@@ -248,7 +274,7 @@
                 <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-blue" style="width:85%"></div></div>
                 <span class="skill-pct">85%</span>
               </div>
-              <p class="skill-detail">Skills, Marketplaces, MCP</p>
+              <p class="skill-detail">Skills, Plugins, Hooks, MCP servers (own, in Go)</p>
               <div class="skill-row">
                 <span class="skill-label">Gemini</span>
                 <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-green" style="width:60%"></div></div>
@@ -264,7 +290,82 @@
                 <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-blue" style="width:50%"></div></div>
                 <span class="skill-pct">50%</span>
               </div>
+              <div class="skill-row">
+                <span class="skill-label">llama.cpp</span>
+                <div class="wb-gauge"><div class="wb-gauge-fill wb-fill-blue" style="width:60%"></div></div>
+                <span class="skill-pct">60%</span>
+              </div>
+              <p class="skill-detail">Self-hosted model server</p>
             </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== HOW I WORK ===== -->
+    <div class="wb-panel" id="principles">
+      <div class="wb-panel-title">How I Work</div>
+      <div class="wb-panel-body">
+        <p>
+          Over the years I have collected a set of engineering principles. I keep them as machine-checkable style
+          guides, so human and AI contributors follow the same rulebook.
+        </p>
+
+        <div class="tech-columns">
+          <div class="tech-col">
+
+            <div class="wb-section-header">Architecture</div>
+            <ul class="principle-list">
+              <li>Every piece of code has one home, named by its role: model, repository, service, controller, view.</li>
+              <li>The domain imports no framework, network or file library. Everything outside the process is a port
+                with an adapter around it. Imports point inward.</li>
+              <li>Everything is wired in one composition root, with no service locator and no global state.</li>
+            </ul>
+
+            <div class="wb-section-header">Code Hygiene</div>
+            <ul class="principle-list">
+              <li>The linter and formatter are the law.</li>
+              <li>Dependencies are pinned and owned: a committed lockfile, no branch dependencies, no
+                <code>latest</code> tags.</li>
+              <li>Configuration is read in one place.</li>
+              <li>Errors are named, carry context and are never swallowed.</li>
+            </ul>
+
+            <div class="wb-section-header">Documentation</div>
+            <ul class="principle-list">
+              <li>Public APIs are 100% documented, enforced by CI gates (RDoc, Go doc, TypeDoc).</li>
+              <li>No narrating comments in function bodies. The "why" lives in the commit message, and so does the
+                reason for any deliberate deviation from a guide.</li>
+            </ul>
+
+          </div>
+          <div class="tech-col">
+
+            <div class="wb-section-header">Security</div>
+            <ul class="principle-list">
+              <li>Secrets are never printed, logged or committed.</li>
+              <li>Single sign-on everywhere (Authentik).</li>
+              <li>Third-party data is untrusted until validated.</li>
+            </ul>
+
+            <div class="wb-section-header">Delivery</div>
+            <ul class="principle-list">
+              <li>CI runs the tests, and a green pipeline is not the same as a running app: containers are checked
+                after every deploy.</li>
+              <li>Zero-downtime blue/green releases with backward-compatible migrations.</li>
+            </ul>
+
+            <div class="wb-section-header">User-facing Text</div>
+            <ul class="principle-list">
+              <li>Everything goes through i18n, with English as the base and Hungarian as the first translation.</li>
+            </ul>
+
+            <div class="wb-section-header">Working with AI Agents</div>
+            <ul class="principle-list">
+              <li>Coding rules live in a Claude Code plugin as style guides with automatic checks.</li>
+              <li>Hooks enforce them on every edit, so the same rulebook applies to every contributor.</li>
+            </ul>
 
           </div>
         </div>
@@ -382,7 +483,7 @@
                 </tr>
                 <tr>
                   <td class="exp-year">2026&ndash;now</td>
-                  <td><strong>Teletype Games</strong><br><em>organizer, programmer (TIC-80, Lua, DevOps)</em></td>
+                  <td><strong>Teletype Games</strong><br><em>organizer, architect (Ruby, Go, TypeScript, 6502 asm, DevOps)</em><br><em>game distribution engine (WarpEngine), telnet BBS network, retro game ports (C64, Plus/4, DOS)</em></td>
                 </tr>
               </table>
             </div>
@@ -399,7 +500,8 @@
         <p>
           I have an interest in many different topics, for example, alternative operating systems and IT history. I
           have a collection of old game consoles. I love human topics as well, especially history and theology. I'm a
-          Waldorf teacher, so I enjoy reading about psychology, pedagogy, and drama theory.
+          Waldorf teacher, so I enjoy reading about psychology, pedagogy, and drama theory. I run a network of telnet BBSes and write games for the Commodore 64
+          and Plus/4.
         </p>
         <div class="hobbies-gallery">
           <div class="hobby-item">

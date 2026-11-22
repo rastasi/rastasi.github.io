@@ -526,6 +526,23 @@ strong {
   font-style: italic;
 }
 
+/* ===== HOW I WORK ===== */
+.principle-list {
+  margin: 0 0 8px;
+  padding: 0 4px 0 18px;
+  font-size: 10px;
+  line-height: 1.4;
+  color: var(--wb-text);
+}
+
+.principle-list li {
+  margin-bottom: 3px;
+}
+
+.principle-list code {
+  font-size: 9px;
+}
+
 /* ===== EXPERIENCES ===== */
 .exp-filter-row {
   display: flex;
