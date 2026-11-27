@@ -851,7 +851,9 @@ h3 {
   .portrait {
     position: relative;
     top: 0;
+    width: 100%;
     max-width: 280px;
+    margin: 0 auto;
   }
 
   .gallery {
