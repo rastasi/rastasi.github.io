@@ -4,81 +4,122 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zsolt Tasnádi - Software Architect</title>
-  <meta name="description" content="Zsolt Tasnádi - Software Architect, DevOps Expert, Programmer. 20+ years of experience.">
-  <meta name="theme-color" content="#6C5EB5">
+  <title>Zsolt Tasnádi – Software Architect, DevOps &amp; AI-native Engineer</title>
+  <meta name="description" content="Zsolt Tasnádi (Tasi) – Software Architect with 20 years of experience and AI-native skills: Ruby, Go, Node.js, DevOps, Claude skills, plugins and own MCP servers. Szeged, Hungary.">
+  <meta name="author" content="Zsolt Tasnádi">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://teletype.hu/">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Zsolt Tasnádi">
+  <meta property="og:url" content="https://teletype.hu/">
+  <meta property="og:title" content="Zsolt Tasnádi – Software Architect, DevOps &amp; AI-native Engineer">
+  <meta property="og:description" content="Software Architect with 20 years of experience – and yes, AI-native skills.">
+  <meta property="og:image" content="https://teletype.hu/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Zsolt Tasnádi – Software Architect with 20 years of experience and AI-native skills">
+  <meta property="og:locale" content="en_US">
+  <meta property="profile:first_name" content="Zsolt">
+  <meta property="profile:last_name" content="Tasnádi">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Zsolt Tasnádi – Software Architect, DevOps &amp; AI-native Engineer">
+  <meta name="twitter:description" content="Software Architect with 20 years of experience – and yes, AI-native skills.">
+  <meta name="twitter:image" content="https://teletype.hu/assets/img/og-image.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "url": "https://teletype.hu/",
+    "mainEntity": {
+      "@type": "Person",
+      "@id": "https://teletype.hu/#person",
+      "name": "Zsolt Tasnádi",
+      "alternateName": ["Tasi", "Zsolt Tasnadi", "Tasnádi Zsolt"],
+      "jobTitle": "Software Architect",
+      "description": "Software Architect with 20 years of experience and AI-native skills.",
+      "url": "https://teletype.hu/",
+      "image": "https://teletype.hu/assets/img/profile-img.jpg",
+      "email": "mailto:rastasi@gmail.com",
+      "address": { "@type": "PostalAddress", "addressLocality": "Szeged", "addressCountry": "HU" },
+      "memberOf": { "@type": "Organization", "name": "John von Neumann Computer Society (NJSZT)" },
+      "worksFor": [
+        { "@type": "Organization", "name": "Teletype Games", "url": "https://teletypegames.org" },
+        { "@type": "Organization", "name": "Zen Heads" }
+      ],
+      "knowsAbout": ["Software architecture", "DevOps", "Ruby", "Ruby on Rails", "Go", "Node.js", "TypeScript", "Vue.js", "React", "Docker", "Kubernetes", "Terraform", "Claude Code", "Model Context Protocol", "LLM", "llama.cpp", "Ollama", "6502 Assembly", "Commodore 64"],
+      "sameAs": [
+        "https://www.linkedin.com/in/rastasizsolt",
+        "https://www.instagram.com/rastasi",
+        "https://facebook.com/rastasizsolt"
+      ]
+    }
+  }
+  </script>
+  <meta name="theme-color" content="#07070c">
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
 
-  <div class="border">
-    <div class="screen">
+  <div class="aurora" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
 
-      <!-- ===== BOOT ===== -->
-      <section class="boot" aria-label="Boot screen">
-        <p class="c-center">**** COMMODORE 64 BASIC V2 ****</p>
-        <p class="c-center">64K RAM SYSTEM  38911 BASIC BYTES FREE</p>
-        <p>&nbsp;</p>
-        <p>READY.</p>
-        <p>LOAD"TASNADI BBS",8,1</p>
-        <p>&nbsp;</p>
-        <p>SEARCHING FOR TASNADI BBS</p>
-        <p>LOADING</p>
-        <p>READY.</p>
-        <p>RUN</p>
-        <p>ATDT TELETYPE.HU</p>
-        <p class="c-lgreen">CONNECT 2400</p>
-      </section>
+  <!-- ===== NAV ===== -->
+  <header class="nav">
+    <a href="#top" class="brand"><span class="brand-mark">ZT</span><span class="brand-name">Zsolt Tasnádi</span></a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#studies">Studies</a></li>
+        <li><a href="#technologies">Technologies</a></li>
+        <li><a href="#principles">How I Work</a></li>
+        <li><a href="#experiences">Experiences</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      <!-- ===== STATUS LINE ===== -->
-      <div class="status" role="banner">
-        <span>TASNADI BBS</span>
-        <span>NODE 1</span>
-        <span id="clock">--:--</span>
+  <main id="top">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-copy">
+        <h1 class="reveal">
+          <span class="h1-role">Zsolt <span class="gradient-text">Tasnádi</span></span>
+        </h1>
+        <p class="lead reveal">Software Architect with 20 years of experience &mdash; and yes, <span class="gradient-text nowrap">AI-native</span> skills.</p>
+        <div class="cta reveal">
+          <a href="mailto:rastasi@gmail.com" class="btn btn-primary">rastasi@gmail.com</a>
+          <a href="https://www.teletype.hu" class="btn btn-ghost" target="_blank" rel="noopener">teletype.hu</a>
+        </div>
       </div>
 
-      <header class="banner">
-        <div class="rainbow" aria-hidden="true"></div>
-        <h1>Zsolt Tasnadi</h1>
-        <p class="c-cyan">Software Architect &bull; DevOps Expert &bull; Programmer</p>
-        <div class="rainbow" aria-hidden="true"></div>
-      </header>
+    </section>
 
-      <!-- ===== MAIN MENU ===== -->
-      <nav class="menu" aria-label="Main menu">
-        <p class="menu-title">MAIN MENU</p>
-        <ul>
-          <li><a href="#about" data-key="a"><span class="key">A</span> About Me</a></li>
-          <li><a href="#studies" data-key="s"><span class="key">S</span> Studies</a></li>
-          <li><a href="#technologies" data-key="t"><span class="key">T</span> Technologies</a></li>
-          <li><a href="#principles" data-key="w"><span class="key">W</span> How I Work</a></li>
-          <li><a href="#experiences" data-key="e"><span class="key">E</span> Experiences</a></li>
-          <li><a href="#hobbies" data-key="h"><span class="key">H</span> Hobbies</a></li>
-          <li><a href="#footer-info" data-key="g"><span class="key">G</span> Goodbye</a></li>
-        </ul>
-        <p class="prompt">Command: <span class="cursor" aria-hidden="true"></span></p>
-      </nav>
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about">
+      <div class="section-head reveal">
+        <h2>About Me</h2>
+      </div>
 
-      <main>
-
-        <!-- ===== ABOUT ===== -->
-        <section class="area" id="about">
-          <h2 class="area-title">About Me</h2>
-          <div class="about">
-            <img src="assets/img/profile-img.jpg" alt="Zsolt Tasnádi" class="c64-pic about-photo" loading="lazy">
-            <dl class="stats">
-              <dt>Birthday</dt><dd>1987.06.16</dd>
-              <dt>Birthplace</dt><dd>Budapest</dd>
-              <dt>Age</dt><dd>39</dd>
-              <dt>Location</dt><dd>Szeged, HU</dd>
-              <dt>Email</dt><dd><a href="mailto:rastasi@gmail.com">rastasi@gmail.com</a></dd>
-              <dt>Phone</dt><dd>+3620-489-35-35</dd>
-              <dt>Web</dt><dd><a href="https://www.teletype.hu" target="_blank">teletype.hu</a></dd>
-            </dl>
-          </div>
+      <div class="about">
+        <figure class="portrait reveal">
+          <img src="assets/img/profile-img.jpg" width="946" height="960" alt="Portrait of Zsolt Tasnádi" loading="lazy">
+        </figure>
+        <div class="about-body reveal">
           <p>
             Hi! I'm Tasi, a 39-year-old IT expert who fell in love with programming and IT system architectures. I
             was 11 (in 1999) when I learned HTML and the basics of the web, so I grew up with the Hungarian web
@@ -87,241 +128,284 @@
             ESP32 microcontroller programming. I'm competent in more than 10 programming languages and countless
             frameworks. Since 2025, I am a member of the <strong>John von Neumann Computer Society (NJSZT)</strong>.
           </p>
-          <p class="social">
-            <a href="https://facebook.com/rastasizsolt" class="btn" target="_blank">FB</a>
-            <a href="https://www.instagram.com/rastasi" class="btn" target="_blank">IG</a>
-            <a href="https://www.linkedin.com/in/rastasizsolt" class="btn" target="_blank">LI</a>
-          </p>
-        </section>
+          <dl class="facts">
+            <div><dt>Birthday</dt><dd>1987.06.16</dd></div>
+            <div><dt>Birthplace</dt><dd>Budapest</dd></div>
+            <div><dt>Age</dt><dd>39</dd></div>
+            <div><dt>Location</dt><dd>Szeged, HU</dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:rastasi@gmail.com">rastasi@gmail.com</a></dd></div>
+            <div><dt>Phone</dt><dd><a href="tel:+36204893535">+3620-489-35-35</a></dd></div>
+            <div><dt>Web</dt><dd><a href="https://www.teletype.hu" target="_blank" rel="noopener">teletype.hu</a></dd></div>
+          </dl>
+          <div class="social">
+            <a href="https://facebook.com/rastasizsolt" class="btn btn-ghost btn-small" target="_blank" rel="noopener">FB</a>
+            <a href="https://www.instagram.com/rastasi" class="btn btn-ghost btn-small" target="_blank" rel="noopener">IG</a>
+            <a href="https://www.linkedin.com/in/rastasizsolt" class="btn btn-ghost btn-small" target="_blank" rel="noopener">LI</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- ===== STUDIES ===== -->
-        <section class="area" id="studies">
-          <h2 class="area-title">Studies</h2>
-          <p>
-            My orientation is basically technical, I have loved the electronic world since my childhood, but besides
-            that, I love to work with people, especially with children. I have a strong sense of how to teach and
-            present any topic. I'm a system administrator and a Waldorf teacher as well.
-          </p>
-          <ul class="log">
-            <li><span class="when">2002-2008</span><span class="what"><strong>Petrik Lajos Secondary School</strong><em>System administration (OKJ 54 4641 03)</em></span></li>
-            <li><span class="when">2008-2012</span><span class="what"><strong>T&ouml;r&ouml;k S&aacute;ndor Waldorf-pedagogical Institute</strong><em>Waldorf teacher (drama)</em></span></li>
-            <li><span class="when">2023</span><span class="what"><strong>Centre of Vocational Education Szeged</strong><em>Cultural event organizer</em></span></li>
-          </ul>
-        </section>
+    <!-- ===== STUDIES ===== -->
+    <section class="section" id="studies">
+      <div class="section-head reveal">
+        <h2>Studies</h2>
+        <p class="intro">
+          My orientation is basically technical, I have loved the electronic world since my childhood, but besides
+          that, I love to work with people, especially with children. I have a strong sense of how to teach and
+          present any topic. I'm a system administrator and a Waldorf teacher as well.
+        </p>
+      </div>
+      <ol class="timeline reveal">
+        <li><time>2002&ndash;2008</time><div><strong>Petrik Lajos Secondary School</strong><span>System administration (OKJ 54 4641 03)</span></div></li>
+        <li><time>2008&ndash;2012</time><div><strong>Török Sándor Waldorf-pedagogical Institute</strong><span>Waldorf teacher (drama)</span></div></li>
+        <li><time>2023</time><div><strong>Centre of Vocational Education Szeged</strong><span>Cultural event organizer</span></div></li>
+      </ol>
+    </section>
 
-        <!-- ===== TECHNOLOGIES ===== -->
-        <section class="area" id="technologies">
-          <h2 class="area-title">Technologies</h2>
-          <p>
-            Over the last 20 years, I have worked with many technologies. Whenever I have an idea or a new job, I always
-            concentrate on finding solutions, not on the technology stack which provides them. I have the courage and
-            curiosity to learn new languages and frameworks. Whatever the stack, I apply the same principles: clear
-            layers, pinned dependencies, documented public APIs and reproducible CI builds.
-          </p>
+    <!-- ===== TECHNOLOGIES ===== -->
+    <section class="section" id="technologies">
+      <div class="section-head reveal">
+        <h2>Technologies</h2>
+        <p class="intro">
+          Over the last 20 years, I have worked with many technologies. Whenever I have an idea or a new job, I always
+          concentrate on finding solutions, not on the technology stack which provides them. I have the courage and
+          curiosity to learn new languages and frameworks. Whatever the stack, I apply the same principles: clear
+          layers, pinned dependencies, documented public APIs and reproducible CI builds.
+        </p>
+      </div>
 
-          <h3 class="sub">Backend Programming</h3>
-          <ul class="skills">
-            <li class="c-lgreen" style="--p:90"><span class="name">Databases</span><span class="bar"></span><span class="pct">90%</span><span class="detail">MySQL/MariaDB, Postgres, MongoDB, ElasticSearch</span></li>
-            <li class="c-cyan" style="--p:95"><span class="name">Node.js</span><span class="bar"></span><span class="pct">95%</span><span class="detail">TypeScript, Express, Sequelize, Mongoose, Knex</span></li>
-            <li class="c-white" style="--p:100"><span class="name">Ruby</span><span class="bar"></span><span class="pct">100%</span><span class="detail">Rails, Sinatra, Padrino, Grape, Rack::App, own gems (rubbs BBS framework, warp_engine)</span></li>
-            <li class="c-cyan" style="--p:85"><span class="name">Golang</span><span class="bar"></span><span class="pct">85%</span></li>
-            <li class="c-lgreen" style="--p:65"><span class="name">Python</span><span class="bar"></span><span class="pct">65%</span><span class="detail">Django, Flask</span></li>
-            <li class="c-lred" style="--p:70"><span class="name">PHP</span><span class="bar"></span><span class="pct">70%</span><span class="detail">Drupal (5.x, 6.x, 7.x)</span></li>
-          </ul>
+      <div class="stack">
+        <article class="card reveal">
+          <h3>Backend Programming</h3>
+          <div class="meter" style="--p:90"><span>Databases <small>MySQL/MariaDB, Postgres, MongoDB, ElasticSearch</small></span><b>90%</b></div>
+          <div class="meter" style="--p:95"><span>Node.js <small>TypeScript, Express, Sequelize, Mongoose, Knex</small></span><b>95%</b></div>
+          <div class="meter" style="--p:100"><span>Ruby <small>Rails, Sinatra, Padrino, Grape, Rack::App, own gems (rubbs BBS framework, warp_engine)</small></span><b>100%</b></div>
+          <div class="meter" style="--p:85"><span>Golang</span><b>85%</b></div>
+          <div class="meter" style="--p:65"><span>Python <small>Django, Flask</small></span><b>65%</b></div>
+          <div class="meter" style="--p:70"><span>PHP <small>Drupal (5.x, 6.x, 7.x)</small></span><b>70%</b></div>
+        </article>
 
-          <h3 class="sub">Frontend Programming</h3>
-          <ul class="skills">
-            <li class="c-white" style="--p:100"><span class="name">HTML, CSS</span><span class="bar"></span><span class="pct">100%</span></li>
-            <li class="c-lgreen" style="--p:75"><span class="name">CSS Frameworks</span><span class="bar"></span><span class="pct">75%</span><span class="detail">Foundation, Bootstrap, Material UI</span></li>
-            <li class="c-cyan" style="--p:85"><span class="name">Vue.js</span><span class="bar"></span><span class="pct">85%</span></li>
-            <li class="c-cyan" style="--p:70"><span class="name">React.js</span><span class="bar"></span><span class="pct">70%</span></li>
-            <li class="c-cyan" style="--p:85"><span class="name">TypeScript</span><span class="bar"></span><span class="pct">85%</span><span class="detail">VS Code extensions, Electron</span></li>
-          </ul>
+        <article class="card reveal">
+          <h3>Frontend Programming</h3>
+          <div class="meter" style="--p:100"><span>HTML, CSS</span><b>100%</b></div>
+          <div class="meter" style="--p:75"><span>CSS Frameworks <small>Foundation, Bootstrap, Material UI</small></span><b>75%</b></div>
+          <div class="meter" style="--p:85"><span>Vue.js</span><b>85%</b></div>
+          <div class="meter" style="--p:70"><span>React.js</span><b>70%</b></div>
+          <div class="meter" style="--p:85"><span>TypeScript <small>VS Code extensions, Electron</small></span><b>85%</b></div>
+        </article>
 
-          <h3 class="sub">DevOps</h3>
-          <ul class="skills">
-            <li class="c-cyan" style="--p:95"><span class="name">Docker</span><span class="bar"></span><span class="pct">95%</span><span class="detail">Docker, Compose, Swarm</span></li>
-            <li class="c-lgreen" style="--p:65"><span class="name">Orchestration</span><span class="bar"></span><span class="pct">65%</span><span class="detail">Kubernetes, Helm, Ansible, Terraform</span></li>
-            <li class="c-white" style="--p:100"><span class="name">Sysadmin</span><span class="bar"></span><span class="pct">100%</span><span class="detail">Debian/Ubuntu, ISPConfig3, VMware, Gitea, Woodpecker CI, Authentik SSO</span></li>
-            <li class="c-lgreen" style="--p:75"><span class="name">Observability</span><span class="bar"></span><span class="pct">75%</span><span class="detail">Grafana, Alloy, Loki, Uptime Kuma, Matomo</span></li>
-          </ul>
+        <article class="card reveal">
+          <h3>DevOps</h3>
+          <div class="meter" style="--p:95"><span>Docker <small>Docker, Compose, Swarm</small></span><b>95%</b></div>
+          <div class="meter" style="--p:65"><span>Orchestration <small>Kubernetes, Helm, Ansible, Terraform</small></span><b>65%</b></div>
+          <div class="meter" style="--p:100"><span>Sysadmin <small>Debian/Ubuntu, ISPConfig3, VMware, Gitea, Woodpecker CI, Authentik SSO</small></span><b>100%</b></div>
+          <div class="meter" style="--p:75"><span>Observability <small>Grafana, Alloy, Loki, Uptime Kuma, Matomo</small></span><b>75%</b></div>
+        </article>
 
-          <h3 class="sub">Message Brokers</h3>
-          <ul class="skills">
-            <li class="c-cyan" style="--p:70"><span class="name">RabbitMQ</span><span class="bar"></span><span class="pct">70%</span></li>
-            <li class="c-lgreen" style="--p:80"><span class="name">MQTT</span><span class="bar"></span><span class="pct">80%</span></li>
-            <li class="c-lgreen" style="--p:80"><span class="name">NATS</span><span class="bar"></span><span class="pct">80%</span></li>
-          </ul>
+        <article class="card reveal">
+          <h3>Message Brokers</h3>
+          <div class="meter" style="--p:70"><span>RabbitMQ</span><b>70%</b></div>
+          <div class="meter" style="--p:80"><span>MQTT</span><b>80%</b></div>
+          <div class="meter" style="--p:80"><span>NATS</span><b>80%</b></div>
+        </article>
 
-          <h3 class="sub">Other Technologies</h3>
-          <ul class="skills">
-            <li class="c-lred" style="--p:30"><span class="name">Pascal/Delphi</span><span class="bar"></span><span class="pct">30%</span></li>
-            <li class="c-white" style="--p:50"><span class="name">ESP32, C++</span><span class="bar"></span><span class="pct">50%</span><span class="detail">ESP32, C++ for DOS (Open Watcom)</span></li>
-            <li class="c-cyan" style="--p:60"><span class="name">6502 Assembly</span><span class="bar"></span><span class="pct">60%</span><span class="detail">ACME, cc65 (Commodore 64, Plus/4)</span></li>
-            <li class="c-lgreen" style="--p:70"><span class="name">Lua</span><span class="bar"></span><span class="pct">70%</span><span class="detail">TIC-80</span></li>
-          </ul>
+        <article class="card reveal">
+          <h3>Other Technologies</h3>
+          <div class="meter" style="--p:30"><span>Pascal/Delphi</span><b>30%</b></div>
+          <div class="meter" style="--p:50"><span>ESP32, C++ <small>ESP32, C++ for DOS (Open Watcom)</small></span><b>50%</b></div>
+          <div class="meter" style="--p:60"><span>6502 Assembly <small>ACME, cc65 (Commodore 64, Plus/4)</small></span><b>60%</b></div>
+          <div class="meter" style="--p:70"><span>Lua <small>TIC-80</small></span><b>70%</b></div>
+        </article>
 
-          <h3 class="sub">AI Knowledge</h3>
-          <ul class="skills">
-            <li class="c-cyan" style="--p:85"><span class="name">Claude</span><span class="bar"></span><span class="pct">85%</span><span class="detail">Skills, Plugins, Hooks, MCP servers (own, in Go)</span></li>
-            <li class="c-lgreen" style="--p:60"><span class="name">Gemini</span><span class="bar"></span><span class="pct">60%</span></li>
-            <li class="c-cyan" style="--p:50"><span class="name">Ollama</span><span class="bar"></span><span class="pct">50%</span></li>
-            <li class="c-cyan" style="--p:50"><span class="name">LM Studio</span><span class="bar"></span><span class="pct">50%</span></li>
-            <li class="c-cyan" style="--p:60"><span class="name">llama.cpp</span><span class="bar"></span><span class="pct">60%</span><span class="detail">Self-hosted model server</span></li>
-          </ul>
-        </section>
+        <article class="card card-accent reveal">
+          <h3>AI Knowledge</h3>
+          <div class="meter" style="--p:85"><span>Claude <small>Skills, Plugins, Hooks, MCP servers (own, in Go)</small></span><b>85%</b></div>
+          <div class="meter" style="--p:60"><span>Gemini</span><b>60%</b></div>
+          <div class="meter" style="--p:50"><span>Ollama</span><b>50%</b></div>
+          <div class="meter" style="--p:50"><span>LM Studio</span><b>50%</b></div>
+          <div class="meter" style="--p:60"><span>llama.cpp <small>Self-hosted model server</small></span><b>60%</b></div>
+        </article>
+      </div>
+    </section>
 
-        <!-- ===== HOW I WORK ===== -->
-        <section class="area" id="principles">
-          <h2 class="area-title">How I Work</h2>
-          <p>
-            Over the years I have collected a set of engineering principles. I keep them as machine-checkable style
-            guides, so human and AI contributors follow the same rulebook.
-          </p>
+    <!-- ===== HOW I WORK ===== -->
+    <section class="section" id="principles">
+      <div class="section-head reveal">
+        <h2>How I Work</h2>
+        <p class="intro">
+          Over the years I have collected a set of engineering principles. I keep them as machine-checkable style
+          guides, so human and AI contributors follow the same rulebook.
+        </p>
+      </div>
 
-          <h3 class="sub">Architecture</h3>
-          <ul class="points">
+      <div class="principles">
+        <article class="card reveal">
+          <h3>Architecture</h3>
+          <ul>
             <li>Every piece of code has one home, named by its role: model, repository, service, controller, view.</li>
             <li>The domain imports no framework, network or file library. Everything outside the process is a port
               with an adapter around it. Imports point inward.</li>
             <li>Everything is wired in one composition root, with no service locator and no global state.</li>
           </ul>
-
-          <h3 class="sub">Code Hygiene</h3>
-          <ul class="points">
+        </article>
+        <article class="card reveal">
+          <h3>Code Hygiene</h3>
+          <ul>
             <li>The linter and formatter are the law.</li>
             <li>Dependencies are pinned and owned: a committed lockfile, no branch dependencies, no
               <code>latest</code> tags.</li>
             <li>Configuration is read in one place.</li>
             <li>Errors are named, carry context and are never swallowed.</li>
           </ul>
-
-          <h3 class="sub">Documentation</h3>
-          <ul class="points">
+        </article>
+        <article class="card reveal">
+          <h3>Documentation</h3>
+          <ul>
             <li>Public APIs are 100% documented, enforced by CI gates (RDoc, Go doc, TypeDoc).</li>
             <li>No narrating comments in function bodies. The "why" lives in the commit message, and so does the
               reason for any deliberate deviation from a guide.</li>
           </ul>
-
-          <h3 class="sub">Security</h3>
-          <ul class="points">
+        </article>
+        <article class="card reveal">
+          <h3>Security</h3>
+          <ul>
             <li>Secrets are never printed, logged or committed.</li>
             <li>Single sign-on everywhere (Authentik).</li>
             <li>Third-party data is untrusted until validated.</li>
           </ul>
-
-          <h3 class="sub">Delivery</h3>
-          <ul class="points">
+        </article>
+        <article class="card reveal">
+          <h3>Delivery</h3>
+          <ul>
             <li>CI runs the tests, and a green pipeline is not the same as a running app: containers are checked
               after every deploy.</li>
             <li>Zero-downtime blue/green releases with backward-compatible migrations.</li>
           </ul>
-
-          <h3 class="sub">User-facing Text</h3>
-          <ul class="points">
+        </article>
+        <article class="card reveal">
+          <h3>User-facing Text</h3>
+          <ul>
             <li>Everything goes through i18n, with English as the base and Hungarian as the first translation.</li>
           </ul>
-
-          <h3 class="sub">Working with AI Agents</h3>
-          <ul class="points">
+        </article>
+        <article class="card card-accent card-full reveal">
+          <h3>Working with AI Agents</h3>
+          <ul>
             <li>Coding rules live in a Claude Code plugin as style guides with automatic checks.</li>
             <li>Hooks enforce them on every edit, so the same rulebook applies to every contributor.</li>
           </ul>
-        </section>
+        </article>
+      </div>
+    </section>
 
-        <!-- ===== EXPERIENCES ===== -->
-        <section class="area" id="experiences">
-          <h2 class="area-title">Experiences</h2>
-          <p>
-            I have had a number of jobs in different positions and different kinds of company over the years. In the
-            last few years, I have founded and worked with a couple of startups. I relish this world and working with
-            enthusiastic young teams.
-          </p>
-
-          <h3 class="sub">Early Years</h3>
-          <ul class="log">
-            <li><span class="when">2004-2008</span><span class="what"><strong>G&ouml;d&ouml;ll&#337; Waldorf School</strong><em>sysadmin and webmaster</em></span></li>
-            <li><span class="when">2009-2015</span><span class="what"><strong>Avignonet Ltd</strong><em>ISP sysadmin (ISPConfig3, PHP, NGINX, Postfix, Dovecot)</em></span></li>
-            <li><span class="when">2009-2017</span><span class="what"><strong>Syrakuza (own team)</strong><em>sales and project manager (Drupal 5.x&ndash;7.x)</em></span></li>
-          </ul>
-
-          <h3 class="sub">Full-time Career</h3>
-          <ul class="log">
-            <li><span class="when">2012-2014</span><span class="what"><strong>PPT Group Ltd</strong><em>Ruby programmer (VOIP, XMPP expert)</em></span></li>
-            <li><span class="when">2013-2016</span><span class="what"><strong>Hungarian Waldorf Alliance</strong><em>sysadmin and webmaster</em></span></li>
-            <li><span class="when">2014-2015</span><span class="what"><strong>Brainsum Ltd</strong><em>Drupal developer (7.x)</em></span></li>
-            <li><span class="when">2015-2016</span><span class="what"><strong>VeryCreatives Ltd</strong><em>Ruby programmer (Ruby on Rails, React.js)</em></span></li>
-            <li><span class="when">2016-2018</span><span class="what"><strong>Electool Hungary Ltd</strong><em>Ruby programmer (Ruby on Rails, React.js)</em></span></li>
-          </ul>
-
-          <h3 class="sub">Startup Career</h3>
-          <ul class="log">
-            <li><span class="when">2016-2017</span><span class="what"><strong>Addventure Ltd</strong><em>co-founder, lead developer (Rails, Express, React.js)</em></span></li>
-            <li><span class="when">2018-2019</span><span class="what"><strong>Drukka Startup Studio</strong><em>CTO (Organizational &amp; Technology development)</em></span></li>
-            <li><span class="when">2017-2020</span><span class="what"><strong>Flow Academy Ltd</strong><em>mentor (JavaScript, SQL, Clean Code, Express, React.js)</em></span></li>
-            <li><span class="when">2017-2021</span><span class="what"><strong>Ai Venture Ltd</strong><em>co-founder (Rails, Express, React.js, Facebook API, NLP)</em></span></li>
-            <li><span class="when">2017-2023</span><span class="what"><strong>Swipe Technologies (Salarify)</strong><em>co-founder, CTO (Express, React.js, K8s, Terraform)</em></span></li>
-            <li><span class="when">2021-2023</span><span class="what"><strong>Smart Babee Hungary</strong><em>advisor, backend dev (Express, React Native, Vue, AWS)</em></span></li>
-            <li><span class="when">2022-2023</span><span class="what"><strong>ReFilamer Ltd</strong><em>advisor, fullstack dev (Golang, Vue, C++, ESP32)</em></span></li>
-          </ul>
-
-          <h3 class="sub">Post-startup &amp; Current</h3>
-          <ul class="log">
-            <li><span class="when">2023-2025</span><span class="what"><strong>PublishDrive Ltd</strong><em>Engineering Team Lead (PHP, Laravel, Python, FastAPI, K8s, RabbitMQ)</em></span></li>
-            <li><span class="when">2024-2026</span><span class="what"><strong>Benchmark Games</strong><em>backend developer (Python, Redis, Postgres, K8s)</em></span></li>
-            <li><span class="when">2025-now</span><span class="what"><strong>Zen Heads</strong><em>full-stack developer (Python, Postgres, Terraform, K8s, React)</em></span></li>
-            <li><span class="when">2026-now</span><span class="what"><strong>Teletype Games</strong><em>organizer, architect (Ruby, Go, TypeScript, 6502 asm, DevOps)</em><em>game distribution engine (WarpEngine), telnet BBS network, retro game ports (C64, Plus/4, DOS)</em></span></li>
-          </ul>
-        </section>
-
-        <!-- ===== HOBBIES ===== -->
-        <section class="area" id="hobbies">
-          <h2 class="area-title">Hobbies</h2>
-          <p>
-            I have an interest in many different topics, for example, alternative operating systems and IT history. I
-            have a collection of old game consoles. I love human topics as well, especially history and theology. I'm a
-            Waldorf teacher, so I enjoy reading about psychology, pedagogy, and drama theory. I run a network of telnet
-            BBSes and write games for the Commodore 64 and Plus/4.
-          </p>
-          <div class="gallery">
-            <figure>
-              <img src="assets/img/hobbies/impostor.jpg" alt="Our first game" class="c64-pic" loading="lazy">
-              <figcaption>Our first Game: Definitely not an Impostor</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/img/hobbies/narniapc.jpg" alt="Pentium I. 233Mhz MMX" class="c64-pic" loading="lazy">
-              <figcaption>Pentium I. 233Mhz MMX</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/img/hobbies/sega.jpg" alt="Lego SEGA Controller" class="c64-pic" loading="lazy">
-              <figcaption>Lego SEGA Controller</figcaption>
-            </figure>
-          </div>
-        </section>
-
-      </main>
-
-      <!-- ===== FOOTER ===== -->
-      <footer class="area" id="footer-info">
-        <h2 class="area-title">Goodbye</h2>
-        <p>Thanks for calling <span class="c-yellow">TASNADI BBS</span>!</p>
-        <p>Leave a message:</p>
-        <p class="links">
-          <a href="mailto:rastasi@gmail.com">rastasi@gmail.com</a>
-          <a href="https://www.teletype.hu" target="_blank">teletype.hu</a>
+    <!-- ===== EXPERIENCES ===== -->
+    <section class="section" id="experiences">
+      <div class="section-head reveal">
+        <h2>Experiences</h2>
+        <p class="intro">
+          I have had a number of jobs in different positions and different kinds of company over the years. In the
+          last few years, I have founded and worked with a couple of startups. I relish this world and working with
+          enthusiastic young teams.
         </p>
-        <div class="rainbow" aria-hidden="true"></div>
-        <p class="c-lblue">Zsolt Tasnadi &bull; Programmer &bull; DevOps &bull; Architect</p>
-        <p class="c-grey">&copy; 2004&ndash;2026 Zsolt Tasnadi</p>
-        <p>&nbsp;</p>
-        <p class="c-lred">NO CARRIER</p>
-        <p>&nbsp;</p>
-        <p>READY.</p>
-        <p><span class="cursor" aria-hidden="true"></span></p>
-      </footer>
+      </div>
 
-    </div>
-  </div>
+      <div class="exp">
+        <div class="exp-col reveal">
+          <h3 class="minor">Early Years</h3>
+          <ol class="timeline">
+            <li><time>2004&ndash;2008</time><div><strong>Gödöllő Waldorf School</strong><span>sysadmin and webmaster</span></div></li>
+            <li><time>2009&ndash;2015</time><div><strong>Avignonet Ltd</strong><span>ISP sysadmin (ISPConfig3, PHP, NGINX, Postfix, Dovecot)</span></div></li>
+            <li><time>2009&ndash;2017</time><div><strong>Syrakuza (own team)</strong><span>sales and project manager (Drupal 5.x&ndash;7.x)</span></div></li>
+          </ol>
+
+          <h3 class="minor">Full-time Career</h3>
+          <ol class="timeline">
+            <li><time>2012&ndash;2014</time><div><strong>PPT Group Ltd</strong><span>Ruby programmer (VOIP, XMPP expert)</span></div></li>
+            <li><time>2013&ndash;2016</time><div><strong>Hungarian Waldorf Alliance</strong><span>sysadmin and webmaster</span></div></li>
+            <li><time>2014&ndash;2015</time><div><strong>Brainsum Ltd</strong><span>Drupal developer (7.x)</span></div></li>
+            <li><time>2015&ndash;2016</time><div><strong>VeryCreatives Ltd</strong><span>Ruby programmer (Ruby on Rails, React.js)</span></div></li>
+            <li><time>2016&ndash;2018</time><div><strong>Electool Hungary Ltd</strong><span>Ruby programmer (Ruby on Rails, React.js)</span></div></li>
+          </ol>
+        </div>
+
+        <div class="exp-col reveal">
+          <h3 class="minor">Startup Career</h3>
+          <ol class="timeline">
+            <li><time>2016&ndash;2017</time><div><strong>Addventure Ltd</strong><span>co-founder, lead developer (Rails, Express, React.js)</span></div></li>
+            <li><time>2018&ndash;2019</time><div><strong>Drukka Startup Studio</strong><span>CTO (Organizational &amp; Technology development)</span></div></li>
+            <li><time>2017&ndash;2020</time><div><strong>Flow Academy Ltd</strong><span>mentor (JavaScript, SQL, Clean Code, Express, React.js)</span></div></li>
+            <li><time>2017&ndash;2021</time><div><strong>Ai Venture Ltd</strong><span>co-founder (Rails, Express, React.js, Facebook API, NLP)</span></div></li>
+            <li><time>2017&ndash;2023</time><div><strong>Swipe Technologies (Salarify)</strong><span>co-founder, CTO (Express, React.js, K8s, Terraform)</span></div></li>
+            <li><time>2021&ndash;2023</time><div><strong>Smart Babee Hungary</strong><span>advisor, backend dev (Express, React Native, Vue, AWS)</span></div></li>
+            <li><time>2022&ndash;2023</time><div><strong>ReFilamer Ltd</strong><span>advisor, fullstack dev (Golang, Vue, C++, ESP32)</span></div></li>
+          </ol>
+
+          <h3 class="minor">Post-startup &amp; Current</h3>
+          <ol class="timeline">
+            <li><time>2023&ndash;2025</time><div><strong>PublishDrive Ltd</strong><span>Engineering Team Lead (PHP, Laravel, Python, FastAPI, K8s, RabbitMQ)</span></div></li>
+            <li><time>2024&ndash;2026</time><div><strong>Benchmark Games</strong><span>backend developer (Python, Redis, Postgres, K8s)</span></div></li>
+            <li class="is-now"><time>2025&ndash;now</time><div><strong>Zen Heads</strong><span>full-stack developer (Python, Postgres, Terraform, K8s, React)</span></div></li>
+            <li class="is-now"><time>2026&ndash;now</time><div><strong>Teletype Games</strong><span>organizer, architect (Ruby, Go, TypeScript, 6502 asm, DevOps)</span><span>game distribution engine (WarpEngine), telnet BBS network, retro game ports (C64, Plus/4, DOS)</span></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOBBIES ===== -->
+    <section class="section" id="hobbies">
+      <div class="section-head reveal">
+        <h2>Hobbies</h2>
+        <p class="intro">
+          I have an interest in many different topics, for example, alternative operating systems and IT history. I
+          have a collection of old game consoles. I love human topics as well, especially history and theology. I'm a
+          Waldorf teacher, so I enjoy reading about psychology, pedagogy, and drama theory. I run a network of telnet
+          BBSes and write games for the Commodore 64 and Plus/4.
+        </p>
+      </div>
+
+      <a href="https://teletypegames.org" class="card card-accent ttg reveal" target="_blank" rel="noopener">
+        <div>
+          <h3>Teletype Games</h3>
+          <p>game distribution engine (WarpEngine), telnet BBS network, retro game ports (C64, Plus/4, DOS)</p>
+        </div>
+        <span class="btn btn-primary btn-small">teletypegames.org <span aria-hidden="true">&rarr;</span></span>
+      </a>
+
+      <div class="gallery">
+        <figure class="reveal">
+          <img src="assets/img/hobbies/impostor.jpg" width="1024" height="768" alt="Definitely not an Impostor, our first game" loading="lazy">
+          <figcaption>Our first Game: Definitely not an Impostor</figcaption>
+        </figure>
+        <figure class="reveal">
+          <img src="assets/img/hobbies/narniapc.jpg" width="1024" height="576" alt="Pentium I. 233Mhz MMX retro PC" loading="lazy">
+          <figcaption>Pentium I. 233Mhz MMX</figcaption>
+        </figure>
+        <figure class="reveal">
+          <img src="assets/img/hobbies/sega.jpg" width="1024" height="768" alt="Lego SEGA controller build" loading="lazy">
+          <figcaption>Lego SEGA Controller</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== GOODBYE ===== -->
+    <section class="section contact" id="footer-info">
+      <div class="contact-card glass reveal">
+        <h2>Goodbye</h2>
+        <p class="intro">Leave a message:</p>
+        <div class="cta">
+          <a href="mailto:rastasi@gmail.com" class="btn btn-primary">rastasi@gmail.com</a>
+          <a href="https://www.teletype.hu" class="btn btn-ghost" target="_blank" rel="noopener">teletype.hu</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2004&ndash;2026 Zsolt Tasnadi</p>
+    <p class="muted">Zsolt Tasnadi &bull; Programmer &bull; DevOps &bull; Architect</p>
+  </footer>
 
   <script src="assets/js/main.js"></script>
   <!-- Matomo -->
